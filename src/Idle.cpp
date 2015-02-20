@@ -7,7 +7,8 @@
 //
 
 #include "Idle.h"
-#include "Settings.h"
+#include "First.h"
+#include "App.h"
 
 //========================================================================
 
@@ -26,7 +27,12 @@ void IDLE::draw(){
 void IDLE::update(){
 }
 
-void IDLE::push(){
+void IDLE::push(){};
+
+
+void IDLE::jump()
+{
+    app->setCurrent(new First(app));
     delete this;
 };
 

@@ -1,33 +1,34 @@
 //
-//  Idle.h
+//  First_state.h
 //  planta
 //
 //  Created by miguel on 20/02/15.
 //
 //
 
-#ifndef __planta__Idle__
-#define __planta__Idle__
+#ifndef __planta__First_state__
+#define __planta__First_state__
 
 #include <State.h>
 //========================================================================
 
-class IDLE: public State
+class First: public State
 {
 public:
     
-    IDLE(App *g);
-    ~IDLE(){};
+    First(App *g);
+    ~First(){};
     
     void notify(Action *action);
-    void push();
     std::string toString() {
-        return "Idle";
+        return "First";
     }
     void update();
+    void push();
     void draw();
     void jump();
+
 };
 
 
-#endif /* defined(__planta__Idle__) */
+#endif /* defined(__planta__First_state__) */
