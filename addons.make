@@ -1,0 +1,4 @@
+ofxOsc
+ofxJSON
+ofxMidi
+ofxTextSuite
