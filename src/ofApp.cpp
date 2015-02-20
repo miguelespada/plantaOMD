@@ -30,23 +30,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    ofPushStyle();
-    ofPushMatrix();
     app.draw();
-    ofPopMatrix();
-    ofPopStyle();
-    
-    ofPushStyle();
-    if(bInfo){
-        ofSetColor(255);
-        ofLine(ofGetMouseX(), 0, ofGetMouseX(), ofGetHeight());
-        ofLine(0, ofGetMouseY(), ofGetWidth(), ofGetMouseY());
-        ofDrawBitmapString(ofToString(ofGetMouseX()) + ", " + ofToString(ofGetMouseY()), ofGetMouseX() + 5, ofGetMouseY() + 15);
-    }
-    ofPopStyle();
+    info.draw();
 }
-
-
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
@@ -64,7 +50,7 @@ void ofApp::keyPressed(int key){
             ofShowCursor();
             break;
         case 'i':
-            bInfo = !bInfo;
+            info.toggle();
             break;
         default:
             break;

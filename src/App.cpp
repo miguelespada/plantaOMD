@@ -36,7 +36,11 @@ void App::jump(){
 }
 
 void App::draw(){
+    ofPushStyle();
+    ofPushMatrix();
     current_state->draw();
+    ofPopMatrix();
+    ofPopStyle();
 }
 
 void App::update(){

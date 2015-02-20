@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "App.h"
+#include "Info.h"
 #include "Assets.h"
 
 class ofApp : public ofBaseApp{
@@ -17,9 +18,7 @@ public:
     void keyReleased(int key);
 
     App app;
-    
-    bool bInfo = false;
-
+    Info info;
 };
 
 
