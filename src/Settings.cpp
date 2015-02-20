@@ -38,4 +38,3 @@ ofColor Settings::getBackgroundColor(){
     string color = Settings::getData("background").asString();
     return ofColor::fromHex(ofHexToInt("0x" + color));
 }
-

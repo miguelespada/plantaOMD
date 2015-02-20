@@ -28,7 +28,7 @@ void App::setCurrent(State *s){
 }
 
 void App::next(){
-    current_state->push();
+    current_state->next();
 }
 
 void App::jump(){

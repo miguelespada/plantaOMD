@@ -23,12 +23,12 @@ class State
 public:
     App *app;
     float timer;
-    virtual void push() =0;
-    virtual void jump() {};
-    virtual std::string toString() {}
-    virtual void draw() {}
+    virtual void next()=0;
+    virtual void jump(){};
+    virtual std::string toString() {};
+    virtual void draw() {};
     virtual void update() {};
-    virtual void notify(Action *action) {}
+    virtual void notify(Action *action) {};
 };
 
 

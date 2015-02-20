@@ -27,13 +27,7 @@ void IDLE::draw(){
 void IDLE::update(){
 }
 
-void IDLE::push(){};
-
-
-void IDLE::jump()
-{
+void IDLE::next(){
     app->setCurrent(new First(app));
     delete this;
 };
-
-

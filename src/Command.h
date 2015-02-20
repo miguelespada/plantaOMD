@@ -16,5 +16,4 @@ public:
     void run(Action *_action, Commandable *g);
 };
 
-
 #endif /* defined(__heinneken__Command__) */

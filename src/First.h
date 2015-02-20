@@ -10,7 +10,6 @@
 #define __planta__First_state__
 
 #include <State.h>
-//========================================================================
 
 class First: public State
 {
@@ -18,17 +17,12 @@ public:
     
     First(App *g);
     ~First(){};
-    
     void notify(Action *action);
-    std::string toString() {
-        return "First";
-    }
+    std::string toString() { return "First"; }
     void update();
-    void push();
     void draw();
-    void jump();
+    void next();
 
 };
-
 
 #endif /* defined(__planta__First_state__) */

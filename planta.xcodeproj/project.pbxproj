@@ -304,13 +304,13 @@
 			children = (
 				49CE11F71A027CD70049A62B /* App.cpp */,
 				49CE11F81A027CD70049A62B /* App.h */,
+				49CE120F1A027CD70049A62B /* State.h */,
 				49CE11EE1A027CD70049A62B /* Action.h */,
 				49CE12021A027CD70049A62B /* Observer.cpp */,
 				49CE12031A027CD70049A62B /* Observer.h */,
 				49CE11F41A027CD70049A62B /* Command.cpp */,
 				49CE11F51A027CD70049A62B /* Command.h */,
 				49CE11F61A027CD70049A62B /* Commandable.h */,
-				49CE120F1A027CD70049A62B /* State.h */,
 			);
 			name = Patterns;
 			sourceTree = "<group>";

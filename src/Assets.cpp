@@ -17,7 +17,6 @@ Assets::~Assets(){
     ofLogVerbose() << "Destroying Assets ";
 }
 
-
 Assets* Assets::instance = 0;
 
 Assets* Assets::getInstance(){
@@ -28,12 +27,9 @@ Assets* Assets::getInstance(){
     return instance;
 };
 
-
 void Assets::load(){
-     string assets_path = Settings::getInstance()->assetsPath();
-
+    string assets_path = Settings::getInstance()->assetsPath();
     ofLogNotice() << "Loading assets from..." << assets_path;
-
 }
 
 

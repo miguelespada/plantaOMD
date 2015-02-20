@@ -17,12 +17,8 @@ void ofApp::setup(){
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
-
-    ofSetWindowPosition(0, 0);
    
     app.setCurrent(new IDLE(&app));
-
-    ofEnableAlphaBlending();
     
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
 }
@@ -35,9 +31,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofPushStyle();
-        ofPushMatrix();
-        app.draw();
-        ofPopMatrix();
+    ofPushMatrix();
+    app.draw();
+    ofPopMatrix();
     ofPopStyle();
     
     ofPushStyle();
@@ -58,8 +54,8 @@ void ofApp::keyPressed(int key){
         case 'f':
             ofToggleFullscreen();
             break;
-        case 'j':
-            app.jump();
+        case 'n':
+            app.next();
             break;
         case 'c':
             ofHideCursor();
@@ -75,5 +71,5 @@ void ofApp::keyPressed(int key){
     }
 }
 
-void ofApp::keyReleased(int key){
-}
+//--------------------------------------------------------------
+void ofApp::keyReleased(int key){}

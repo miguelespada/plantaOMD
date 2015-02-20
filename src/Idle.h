@@ -18,15 +18,11 @@ public:
     
     IDLE(App *g);
     ~IDLE(){};
-    
     void notify(Action *action);
-    void push();
-    std::string toString() {
-        return "Idle";
-    }
+    std::string toString() { return "Idle"; }
     void update();
     void draw();
-    void jump();
+    void next();
 };
 
 
