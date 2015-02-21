@@ -11,9 +11,8 @@
 Info::Info(){
     ofAddListener(ofEvents().keyPressed, this, &Info::keyPressed);
     ofRegisterGetMessages(this);
-    ss = "";
+    info = "";
 };
-
 
 void Info::draw(){
     if(!bInfo) return;
@@ -24,8 +23,8 @@ void Info::draw(){
     ofLine(0, ofGetMouseY(), ofGetWidth(), ofGetMouseY());
     ofDrawBitmapString(ofToString(ofGetMouseX()) + ", " + ofToString(ofGetMouseY()), ofGetMouseX() + 5, ofGetMouseY() + 15);
     ofDrawBitmapString("fps: " + ofToString((int)ofGetFrameRate()), 5, 15);
-    ofDrawBitmapString(ss, 5, 30);
-    ss = "";
+    ofDrawBitmapString(info, 5, 30);
+    info = "";
     ofPopStyle();
 };
 
@@ -46,7 +45,7 @@ void Info::keyPressed (ofKeyEventArgs& eventArgs){
 void Info::gotMessage(ofMessage& msg){
     if(!bInfo) return;
     if(msg.message.substr(0, 6) == "[Info]"){
-        ss += msg.message.substr(7);
-        ss += "\n";
+        info += msg.message.substr(7);
+        info += "\n";
     }
 }

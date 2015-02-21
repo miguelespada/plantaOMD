@@ -15,7 +15,6 @@
 class Settings{
 public:
     static Settings* getInstance();
-    ~Settings();
     void load();
     string assetsPath();
     

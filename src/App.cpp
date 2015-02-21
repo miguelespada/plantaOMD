@@ -11,12 +11,8 @@
 App::App(){
     // Register events and actions
     ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
-    ofAddListener(ofEvents().update, this, &App::update);
-    
+    ofAddListener(ofEvents().update, this, &App::update);    
     ofAddListener(ArduinoEvent::digitalEvents, this, &App::arduinoEvent);
-}
-
-App::~App(){
 }
 
 void App::setCurrentState(State *s){

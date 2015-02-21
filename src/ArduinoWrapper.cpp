@@ -11,8 +11,6 @@
 ArduinoWrapper::ArduinoWrapper(){
     bArduinoConnected = false;
     bSetupArduino = false;
-    
-    ofLogVerbose() << "Constructing Arduino";
     arduino = new ofArduino;
     ofAddListener(ofEvents().update, this, &ArduinoWrapper::update);
 }

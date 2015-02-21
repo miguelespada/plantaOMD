@@ -2,11 +2,6 @@
 #include "Assets.h"
 
 Settings::Settings(){
-    ofLogVerbose() << "Constructing Settings ";
-
-}
-Settings::~Settings(){
-    ofLogVerbose() << "Destroying Settings ";
 }
 
 Settings* Settings::instance = 0;

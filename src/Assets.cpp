@@ -10,11 +10,6 @@
 
 
 Assets::Assets(){
-    ofLogVerbose() << "Constructing Assets ";
-}
-
-Assets::~Assets(){
-    ofLogVerbose() << "Destroying Assets ";
 }
 
 Assets* Assets::instance = 0;

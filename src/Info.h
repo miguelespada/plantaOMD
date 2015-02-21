@@ -15,10 +15,9 @@
 class Info
 {
     bool bInfo = false;
-    string ss;
+    string info;
 public:
     Info();
-     ~Info(){};
     void draw();
     void toggle();
     void keyPressed(ofKeyEventArgs& eventArgs);

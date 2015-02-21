@@ -17,7 +17,6 @@
 
 class Assets{
 public:
-    ~Assets();
     static Assets* getInstance();
     void load();
 

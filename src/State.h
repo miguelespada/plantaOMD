@@ -12,9 +12,6 @@
 #include "ofMain.h"
 #include "Settings.h"
 
-
-//========================================================================
-
 class App;
 
 class State

@@ -1,11 +1,3 @@
-//
-//  First_state.h
-//  planta
-//
-//  Created by miguel on 20/02/15.
-//
-//
-
 #ifndef __planta__First_state__
 #define __planta__First_state__
 
@@ -15,7 +7,6 @@ class First: public State
 {
 public:
     First(App *g);
-    ~First(){};
     std::string toString() { return "First"; }
     void update();
     void draw();
