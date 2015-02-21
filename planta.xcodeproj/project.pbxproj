@@ -24,6 +24,7 @@
 		49CE121B1A027CD70049A62B /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE12041A027CD70049A62B /* ofApp.cpp */; };
 		49CE121F1A027CD70049A62B /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE120C1A027CD70049A62B /* Settings.cpp */; };
 		49CE12291A0280070049A62B /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */; };
+		49F8D4411A98900400F3D428 /* ArduinoWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F8D43F1A98900400F3D428 /* ArduinoWrapper.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
 		5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF49D76C45D5DB505A234880 /* ofxOscMessage.cpp */; };
@@ -135,6 +136,8 @@
 		49CE120C1A027CD70049A62B /* Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Settings.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		49CE120D1A027CD70049A62B /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		49CE120F1A027CD70049A62B /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		49F8D43F1A98900400F3D428 /* ArduinoWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArduinoWrapper.cpp; sourceTree = "<group>"; };
+		49F8D4401A98900400F3D428 /* ArduinoWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArduinoWrapper.h; sourceTree = "<group>"; };
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocketWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/UdpSocketWin.cpp; sourceTree = SOURCE_ROOT; };
 		61313493CDB52744E22A604D /* json-forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "json-forwards.h"; path = "../../../addons/ofxJSON/libs/jsoncpp/include/json/json-forwards.h"; sourceTree = SOURCE_ROOT; };
@@ -316,6 +319,15 @@
 				49CE11F61A027CD70049A62B /* Commandable.h */,
 			);
 			name = Patterns;
+			sourceTree = "<group>";
+		};
+		49F8D4421A98900A00F3D428 /* Arduino */ = {
+			isa = PBXGroup;
+			children = (
+				49F8D43F1A98900400F3D428 /* ArduinoWrapper.cpp */,
+				49F8D4401A98900400F3D428 /* ArduinoWrapper.h */,
+			);
+			name = Arduino;
 			sourceTree = "<group>";
 		};
 		58AD3BD71B781D9BC25763C8 /* json */ = {
@@ -529,6 +541,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49F8D4421A98900A00F3D428 /* Arduino */,
 				49C4A1A71A067461000D8844 /* Patterns */,
 				49C4A1A61A06743C000D8844 /* Assets */,
 				49A03F431A978BC40094081E /* States */,
@@ -676,6 +689,7 @@
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
+				49F8D4411A98900400F3D428 /* ArduinoWrapper.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				49CE12101A027CD70049A62B /* Assets.cpp in Sources */,

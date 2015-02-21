@@ -14,7 +14,6 @@
 class First: public State
 {
 public:
-    
     First(App *g);
     ~First(){};
     void notify(Action *action);
@@ -22,7 +21,6 @@ public:
     void update();
     void draw();
     void next();
-
 };
 
 #endif /* defined(__planta__First_state__) */

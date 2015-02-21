@@ -26,7 +26,6 @@ void Info::draw(){
 
 void Info::toggle(){
     bInfo = !bInfo;
-    cout << bInfo << endl;
 };
 
 void Info::keyPressed (ofKeyEventArgs& eventArgs){

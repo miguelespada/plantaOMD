@@ -20,10 +20,10 @@ public:
     void keyPressed(ofKeyEventArgs& eventArgs);
     void update(ofEventArgs &args);
     
+    void update();
     void next();
     void jump();
     void draw();
-    void update();
 };
 
 #endif

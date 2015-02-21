@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "App.h"
 #include "Info.h"
+#include "ArduinoWrapper.h"
 
 class ofApp : public ofBaseApp{
 public:
@@ -18,6 +19,7 @@ public:
 
     App app;
     Info info;
+    ArduinoWrapper arduino;
 };
 
 
