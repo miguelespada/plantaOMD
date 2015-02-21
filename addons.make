@@ -1,4 +1,0 @@
-ofxOsc
-ofxJSON
-ofxMidi
-ofxTextSuite

@@ -10,7 +10,9 @@
 #include "Command.h"
 
 App::App(){
-    // Register actions
+    // Register events and actions
+    ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
+    ofAddListener(ofEvents().update, this, &App::update);
 }
 
 App::~App(){
@@ -23,7 +25,7 @@ void App::notify(Action *action){
     run(action);
 }
 
-void App::setCurrent(State *s){
+void App::setCurrentState(State *s){
     current_state = s;
 }
 
@@ -47,4 +49,16 @@ void App::update(){
     current_state->update();
 }
 
+void App::update(ofEventArgs &args){
+    update();
+}
 
+void App::keyPressed (ofKeyEventArgs& eventArgs){
+    switch (eventArgs.key) {
+        case 'n':
+            next();
+            break;
+        default:
+            break;
+    }
+}

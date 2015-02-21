@@ -28,6 +28,6 @@ void IDLE::update(){
 }
 
 void IDLE::next(){
-    app->setCurrent(new First(app));
+    app->setCurrentState(new First(app));
     delete this;
 };

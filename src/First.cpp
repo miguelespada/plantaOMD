@@ -16,6 +16,6 @@ void First::draw(){
 void First::update(){}
 
 void First::next(){
-    app->setCurrent(new IDLE(app));
+    app->setCurrentState(new IDLE(app));
     delete this;
 };

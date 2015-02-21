@@ -20,5 +20,6 @@ public:
     ~Info();
     void draw();
     void toggle();
+    void keyPressed(ofKeyEventArgs& eventArgs);
 };
 #endif /* defined(__planta__Info__) */

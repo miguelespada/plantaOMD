@@ -3,7 +3,6 @@
 #include "ofMain.h"
 #include "App.h"
 #include "Info.h"
-#include "Assets.h"
 
 class ofApp : public ofBaseApp{
 public:

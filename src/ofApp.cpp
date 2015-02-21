@@ -1,7 +1,6 @@
 #include "ofApp.h"
 #include "Idle.h"
 #include "Settings.h"
-#include "Settings.h"
 
 ofApp::ofApp(){
     ofLogVerbose() << "Constructing Main";
@@ -18,14 +17,13 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
    
-    app.setCurrent(new IDLE(&app));
+    app.setCurrentState(new IDLE(&app));
     
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    app.update();
 }
 
 //--------------------------------------------------------------
@@ -40,17 +38,11 @@ void ofApp::keyPressed(int key){
         case 'f':
             ofToggleFullscreen();
             break;
-        case 'n':
-            app.next();
-            break;
         case 'c':
             ofHideCursor();
             break;
         case 'C':
             ofShowCursor();
-            break;
-        case 'i':
-            info.toggle();
             break;
         default:
             break;

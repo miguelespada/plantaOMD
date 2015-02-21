@@ -14,10 +14,11 @@ public:
     App();    
     ~App();
     class State *current_state;
-    class Settings *settings;
     
-    void setCurrent(State *s);
+    void setCurrentState(State *s);
     void notify(Action *action);
+    void keyPressed(ofKeyEventArgs& eventArgs);
+    void update(ofEventArgs &args);
     
     void next();
     void jump();

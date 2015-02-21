@@ -8,7 +8,10 @@
 
 #include "Info.h"
 
-Info::Info(){};
+Info::Info(){
+    ofAddListener(ofEvents().keyPressed, this, &Info::keyPressed);
+};
+
 Info::~Info(){};
 
 void Info::draw(){
@@ -23,4 +26,15 @@ void Info::draw(){
 
 void Info::toggle(){
     bInfo = !bInfo;
+    cout << bInfo << endl;
 };
+
+void Info::keyPressed (ofKeyEventArgs& eventArgs){
+    switch (eventArgs.key) {
+        case 'i':
+            toggle();
+            break;
+        default:
+            break;
+    }
+}
