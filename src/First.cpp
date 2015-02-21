@@ -7,8 +7,6 @@ First::First(App *a){
     ofLogNotice() << "State: " << toString();
 };
 
-void First::notify(Action *action){};
-
 void First::draw(){
     ofBackground(0);
 };

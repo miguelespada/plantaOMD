@@ -16,7 +16,6 @@ class First: public State
 public:
     First(App *g);
     ~First(){};
-    void notify(Action *action);
     std::string toString() { return "First"; }
     void update();
     void draw();

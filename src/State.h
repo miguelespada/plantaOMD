@@ -10,7 +10,6 @@
 #define __game__State__
 
 #include "ofMain.h"
-#include "Action.h"
 #include "Settings.h"
 
 
@@ -28,7 +27,6 @@ public:
     virtual std::string toString() {};
     virtual void draw() {};
     virtual void update() {};
-    virtual void notify(Action *action) {};
 };
 
 

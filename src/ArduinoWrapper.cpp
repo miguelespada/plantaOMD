@@ -91,9 +91,13 @@ void ArduinoWrapper::update(){
 //--------------------------------------------------------------
 void ArduinoWrapper::update(ofEventArgs &args){
     update();
+    
+    ArduinoEvent event((int)ofRandom(5), (int)ofRandom(5));
+    ofNotifyEvent(ArduinoEvent::digitalEvents, event);
 }
 
 //--------------------------------------------------------------
 void  ArduinoWrapper::digitalPinChanged(const int & pinNum) {
+    
 }
 

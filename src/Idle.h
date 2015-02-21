@@ -18,7 +18,6 @@ public:
     
     IDLE(App *g);
     ~IDLE(){};
-    void notify(Action *action);
     std::string toString() { return "Idle"; }
     void update();
     void draw();

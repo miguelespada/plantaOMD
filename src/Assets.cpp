@@ -29,7 +29,7 @@ Assets* Assets::getInstance(){
 
 void Assets::load(){
     string assets_path = Settings::getInstance()->assetsPath();
-    ofLogNotice() << "Loading assets from..." << assets_path;
+    ofLogNotice() << "Loading assets from: " << assets_path;
 }
 
 

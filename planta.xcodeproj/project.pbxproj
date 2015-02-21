@@ -17,14 +17,13 @@
 		49A03F471A97914B0094081E /* First.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F451A97914B0094081E /* First.cpp */; };
 		49A03F4A1A97979F0094081E /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F481A97979F0094081E /* Info.cpp */; };
 		49CE12101A027CD70049A62B /* Assets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11EF1A027CD70049A62B /* Assets.cpp */; };
-		49CE12131A027CD70049A62B /* Command.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11F41A027CD70049A62B /* Command.cpp */; };
 		49CE12141A027CD70049A62B /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11F71A027CD70049A62B /* App.cpp */; };
 		49CE12171A027CD70049A62B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11FD1A027CD70049A62B /* main.cpp */; };
-		49CE121A1A027CD70049A62B /* Observer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE12021A027CD70049A62B /* Observer.cpp */; };
 		49CE121B1A027CD70049A62B /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE12041A027CD70049A62B /* ofApp.cpp */; };
 		49CE121F1A027CD70049A62B /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE120C1A027CD70049A62B /* Settings.cpp */; };
 		49CE12291A0280070049A62B /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */; };
 		49F8D4411A98900400F3D428 /* ArduinoWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F8D43F1A98900400F3D428 /* ArduinoWrapper.cpp */; };
+		49F8D4481A98A3AD00F3D428 /* ArduinoEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49F8D4471A98A3AD00F3D428 /* ArduinoEvent.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
 		5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF49D76C45D5DB505A234880 /* ofxOscMessage.cpp */; };
@@ -120,17 +119,11 @@
 		49A03F461A97914B0094081E /* First.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = First.h; sourceTree = "<group>"; };
 		49A03F481A97979F0094081E /* Info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Info.cpp; sourceTree = "<group>"; };
 		49A03F491A97979F0094081E /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
-		49CE11EE1A027CD70049A62B /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		49CE11EF1A027CD70049A62B /* Assets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assets.cpp; sourceTree = "<group>"; };
 		49CE11F01A027CD70049A62B /* Assets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assets.h; sourceTree = "<group>"; };
-		49CE11F41A027CD70049A62B /* Command.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Command.cpp; sourceTree = "<group>"; };
-		49CE11F51A027CD70049A62B /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
-		49CE11F61A027CD70049A62B /* Commandable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Commandable.h; sourceTree = "<group>"; };
 		49CE11F71A027CD70049A62B /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
 		49CE11F81A027CD70049A62B /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		49CE11FD1A027CD70049A62B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		49CE12021A027CD70049A62B /* Observer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Observer.cpp; sourceTree = "<group>"; };
-		49CE12031A027CD70049A62B /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
 		49CE12041A027CD70049A62B /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		49CE12051A027CD70049A62B /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		49CE120C1A027CD70049A62B /* Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Settings.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
@@ -138,6 +131,8 @@
 		49CE120F1A027CD70049A62B /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
 		49F8D43F1A98900400F3D428 /* ArduinoWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArduinoWrapper.cpp; sourceTree = "<group>"; };
 		49F8D4401A98900400F3D428 /* ArduinoWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArduinoWrapper.h; sourceTree = "<group>"; };
+		49F8D4431A98A1B400F3D428 /* ArduinoEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArduinoEvent.h; sourceTree = "<group>"; };
+		49F8D4471A98A3AD00F3D428 /* ArduinoEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArduinoEvent.cpp; sourceTree = "<group>"; };
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocketWin.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/win32/UdpSocketWin.cpp; sourceTree = SOURCE_ROOT; };
 		61313493CDB52744E22A604D /* json-forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "json-forwards.h"; path = "../../../addons/ofxJSON/libs/jsoncpp/include/json/json-forwards.h"; sourceTree = SOURCE_ROOT; };
@@ -286,6 +281,7 @@
 		49A03F431A978BC40094081E /* States */ = {
 			isa = PBXGroup;
 			children = (
+				49CE120F1A027CD70049A62B /* State.h */,
 				49A03F401A978B7D0094081E /* Idle.cpp */,
 				49A03F411A978B7D0094081E /* Idle.h */,
 				49A03F451A97914B0094081E /* First.cpp */,
@@ -305,20 +301,15 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
-		49C4A1A71A067461000D8844 /* Patterns */ = {
+		49C4A1A71A067461000D8844 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				49A03F481A97979F0094081E /* Info.cpp */,
+				49A03F491A97979F0094081E /* Info.h */,
 				49CE11F71A027CD70049A62B /* App.cpp */,
 				49CE11F81A027CD70049A62B /* App.h */,
-				49CE120F1A027CD70049A62B /* State.h */,
-				49CE11EE1A027CD70049A62B /* Action.h */,
-				49CE12021A027CD70049A62B /* Observer.cpp */,
-				49CE12031A027CD70049A62B /* Observer.h */,
-				49CE11F41A027CD70049A62B /* Command.cpp */,
-				49CE11F51A027CD70049A62B /* Command.h */,
-				49CE11F61A027CD70049A62B /* Commandable.h */,
 			);
-			name = Patterns;
+			name = App;
 			sourceTree = "<group>";
 		};
 		49F8D4421A98900A00F3D428 /* Arduino */ = {
@@ -326,6 +317,8 @@
 			children = (
 				49F8D43F1A98900400F3D428 /* ArduinoWrapper.cpp */,
 				49F8D4401A98900400F3D428 /* ArduinoWrapper.h */,
+				49F8D4431A98A1B400F3D428 /* ArduinoEvent.h */,
+				49F8D4471A98A3AD00F3D428 /* ArduinoEvent.cpp */,
 			);
 			name = Arduino;
 			sourceTree = "<group>";
@@ -542,11 +535,9 @@
 			isa = PBXGroup;
 			children = (
 				49F8D4421A98900A00F3D428 /* Arduino */,
-				49C4A1A71A067461000D8844 /* Patterns */,
+				49C4A1A71A067461000D8844 /* App */,
 				49C4A1A61A06743C000D8844 /* Assets */,
 				49A03F431A978BC40094081E /* States */,
-				49A03F481A97979F0094081E /* Info.cpp */,
-				49A03F491A97979F0094081E /* Info.h */,
 				49CE12041A027CD70049A62B /* ofApp.cpp */,
 				49CE12051A027CD70049A62B /* ofApp.h */,
 				49CE11FD1A027CD70049A62B /* main.cpp */,
@@ -694,7 +685,6 @@
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				49CE12101A027CD70049A62B /* Assets.cpp in Sources */,
 				A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */,
-				49CE121A1A027CD70049A62B /* Observer.cpp in Sources */,
 				28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */,
 				49A03F421A978B7D0094081E /* Idle.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
@@ -702,7 +692,7 @@
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				49CE121F1A027CD70049A62B /* Settings.cpp in Sources */,
-				49CE12131A027CD70049A62B /* Command.cpp in Sources */,
+				49F8D4481A98A3AD00F3D428 /* ArduinoEvent.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */,
 				FB84AAF8D1B7A95266DB5C09 /* jsoncpp.cpp in Sources */,

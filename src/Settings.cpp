@@ -19,7 +19,13 @@ Settings* Settings::getInstance(){
 };
 
 void Settings::load(){
-    json_file.open(ofToDataPath("settings.json"));
+    string path = ofToDataPath("settings.json");
+    ofLogNotice() << "Loading settings from: " << path;
+    json_file.open(path);
+}
+
+string Settings::assetsPath(){
+    return ofToDataPath("assets/" );
 }
 
 Json::Value Settings::getData(string key){
@@ -27,11 +33,11 @@ Json::Value Settings::getData(string key){
 }
 
 int Settings::getWidth(){
-    return WIDTH * SCALE;
+    return Settings::getData("width").asInt() * Settings::getData("scale").asFloat();
 }
 
 int Settings::getHeight(){
-    return HEIGHT * SCALE;
+    return Settings::getData("height").asInt() * Settings::getData("scale").asFloat();
 }
 
 ofColor Settings::getBackgroundColor(){

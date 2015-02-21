@@ -17,9 +17,6 @@ IDLE::IDLE(App *a){
     ofLogNotice() << "State: " << toString();
 };
 
-void IDLE::notify(Action *action){
-};
-
 void IDLE::draw(){
     ofBackground(Settings::getInstance()->getBackgroundColor());
 };

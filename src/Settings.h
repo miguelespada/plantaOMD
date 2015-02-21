@@ -12,10 +12,6 @@
 #include "ofxJSON.h"
 #include "ofMain.h"
 
-#define SCALE 1
-#define WIDTH 800
-#define HEIGHT 480
-
 class Settings{
 public:
     static Settings* getInstance();

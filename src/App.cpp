@@ -7,22 +7,16 @@
 //
 
 #include "App.h"
-#include "Command.h"
 
 App::App(){
     // Register events and actions
     ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
     ofAddListener(ofEvents().update, this, &App::update);
+    
+    ofAddListener(ArduinoEvent::digitalEvents, this, &App::arduinoEvent);
 }
 
 App::~App(){
-    destroyCommands();
-}
-
-void App::notify(Action *action){
-    // Chain of command
-    current_state->notify(action);    
-    run(action);
 }
 
 void App::setCurrentState(State *s){
@@ -61,4 +55,7 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
         default:
             break;
     }
+}
+
+void App::arduinoEvent(ArduinoEvent &e){
 }
