@@ -12,17 +12,16 @@ ofApp::~ofApp(){
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
-    
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
+    
     app.setCurrentState(new IDLE(&app));
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    // App is updated with listeners
+    // Services are updated with listeners
 }
 
 //--------------------------------------------------------------

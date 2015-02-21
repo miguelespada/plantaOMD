@@ -11,7 +11,8 @@
 ArduinoWrapper::ArduinoWrapper(){
     bArduinoConnected = false;
     bSetupArduino = false;
-
+    
+    ofLogVerbose() << "Constructing Arduino";
     arduino = new ofArduino;
     ofAddListener(ofEvents().update, this, &ArduinoWrapper::update);
 }
@@ -69,7 +70,6 @@ void ArduinoWrapper::configPins(){
     arduino->sendDigitalPinMode(6, ARD_INPUT);
 }
 
-
 //--------------------------------------------------------------
 void ArduinoWrapper::update(){
     
@@ -78,14 +78,11 @@ void ArduinoWrapper::update(){
     
     if(ofGetFrameNum() % RECONNECT_RATE == 0){
         string deviceName = getPort();
-        
-        if(deviceName == ""){
-            if(bArduinoConnected){
-                arduino->disconnect();
-                bArduinoConnected = false;
-            }
+        if(deviceName == "" && bArduinoConnected){
+            arduino->disconnect();
+            bArduinoConnected = false;
         }
-        else {
+        if(deviceName != "" && !bArduinoConnected){
             connectArduino(deviceName);
         }
     }
