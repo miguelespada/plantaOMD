@@ -3,11 +3,6 @@
 #include "Settings.h"
 
 ofApp::ofApp(){
-    ofLogVerbose() << "Constructing Main";
-}
-
-ofApp::~ofApp(){
-    ofLogVerbose() << "Destroying Main";
 }
 
 //--------------------------------------------------------------

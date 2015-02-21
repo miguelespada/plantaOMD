@@ -15,11 +15,13 @@
 class Info
 {
     bool bInfo = false;
+    string ss;
 public:
     Info();
-    ~Info();
+     ~Info(){};
     void draw();
     void toggle();
     void keyPressed(ofKeyEventArgs& eventArgs);
+    void gotMessage(ofMessage& msg);
 };
 #endif /* defined(__planta__Info__) */

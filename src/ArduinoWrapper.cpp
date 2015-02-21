@@ -73,8 +73,13 @@ void ArduinoWrapper::configPins(){
 //--------------------------------------------------------------
 void ArduinoWrapper::update(){
     
-    if(bArduinoConnected)
+    if(bArduinoConnected) {
+        ofSendMessage("[Info] Arduino connected");
         arduino->update();
+    }
+    else{
+        ofSendMessage("[Info] Arduino NOT connected");
+    }
     
     if(ofGetFrameNum() % RECONNECT_RATE == 0){
         string deviceName = getPort();
