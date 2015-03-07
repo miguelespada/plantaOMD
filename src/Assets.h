@@ -25,11 +25,11 @@ public:
     void drawString(string text, int x, int y);
     
     ofImage planta;
+    
     Animation *viento;
     Animation *agua;
     Animation *luz;
     Animation *niebla;
-    Animation *flor;
     
     Animation *luz_bien;
     Animation *luz_regular;
@@ -43,10 +43,11 @@ public:
     Animation *niebla_regular;
     Animation *niebla_mal;
     
-    
     Animation *agua_bien;
     Animation *agua_regular;
     AnimationAguaMal *agua_mal;
+    
+    Animation *flor;
     
 private:
     static Assets* instance;
