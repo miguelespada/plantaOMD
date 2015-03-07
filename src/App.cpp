@@ -105,6 +105,8 @@ void App::soapEvent(SoapEvent &e){
     if(e.value < 50) states[e.index] = MAL;
     else if(e.value < 100) states[e.index] = REGULAR;
     else states[e.index] = BIEN;
+    
+    ofLogNotice() << "Set state " << e.index << " -> " << e.value;
 }
 
 void App::arduinoEvent(ArduinoEvent &e){
