@@ -28,6 +28,13 @@ public:
     Animation *luz;
     Animation *niebla;
     
+    Animation *luz_bien;
+    Animation *luz_regular;
+    Animation *luz_mal;
+    
+    Animation *viento_bien;
+    Animation *viento_regular;
+    Animation *viento_mal;
     
 private:
     static Assets* instance;

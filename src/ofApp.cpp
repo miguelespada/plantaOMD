@@ -1,6 +1,6 @@
 #include "ofApp.h"
-#include "General.h"
 #include "Settings.h"
+#include "Luz.h"
 
 ofApp::ofApp(){
 }
@@ -11,7 +11,7 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
     
-    app.setCurrentState(new General(&app));
+    app.setCurrentState(new Luz::Luz(&app));
     
 }
 

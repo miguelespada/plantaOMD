@@ -19,7 +19,7 @@ class State
 {
 public:
     App *app;
-    Assets *assets;
+    Assets *assets = Assets::getInstance();
     
     float timer;
     virtual void next()=0;

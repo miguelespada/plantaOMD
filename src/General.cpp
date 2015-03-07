@@ -5,7 +5,6 @@
 General::General(App *a){
     ofLogNotice() << "State: " << toString();
     app = a;
-    assets = Assets::getInstance();
 };
 
 void General::draw(){
