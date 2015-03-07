@@ -1,6 +1,6 @@
 #include "Luz.h"
 #include "App.h"
-#include "General.h"
+#include "Viento.h"
 
 Luz::Luz(App *a){
     ofLogNotice() << "State: " << toString();
@@ -9,14 +9,28 @@ Luz::Luz(App *a){
 
 void Luz::draw(){
     ofBackground(Settings::getInstance()->getBackgroundColor());
-    assets->luz_mal->draw();
-};
+    switch (app->getState(LUZ)) {
+        case BIEN:
+            assets->luz_bien->draw();
+            break;
+        case MAL:
+            assets->luz_mal->draw();
+            break;
+        case REGULAR:
+            assets->luz_regular->draw();
+            break;
+        default:
+            break;
+    }};
 
 void Luz::update(){
+    
+    assets->luz_bien->update();
+    assets->luz_regular->update();
     assets->luz_mal->update();
 }
 
 void Luz::next(){
-    app->setCurrentState(new General(app));
+    app->setCurrentState(new Viento(app));
     delete this;
 };

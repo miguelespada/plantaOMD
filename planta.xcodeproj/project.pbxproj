@@ -14,6 +14,9 @@
 		3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B183BC00EBFFB1EEA5AB8 /* ofxRtMidiOut.cpp */; };
 		4903C5C519FE81DB007A152B /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903C5C419FE81DB007A152B /* CoreMIDI.framework */; };
 		49599CF31AAB1DEA00498142 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49599CF21AAB1DEA00498142 /* Animation.cpp */; };
+		49599CF61AAB2FCE00498142 /* Viento.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49599CF41AAB2FCE00498142 /* Viento.cpp */; };
+		49599CF91AAB316500498142 /* Niebla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49599CF71AAB316500498142 /* Niebla.cpp */; };
+		49599CFC1AAB31BC00498142 /* Agua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49599CFA1AAB31BC00498142 /* Agua.cpp */; };
 		49A03F421A978B7D0094081E /* General.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F401A978B7D0094081E /* General.cpp */; };
 		49A03F471A97914B0094081E /* Luz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F451A97914B0094081E /* Luz.cpp */; };
 		49A03F4A1A97979F0094081E /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F481A97979F0094081E /* Info.cpp */; };
@@ -116,6 +119,12 @@
 		4903C5C419FE81DB007A152B /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = ../../../../../../../../System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<group>"; };
 		49599CED1AAB159900498142 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		49599CF21AAB1DEA00498142 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		49599CF41AAB2FCE00498142 /* Viento.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Viento.cpp; sourceTree = "<group>"; };
+		49599CF51AAB2FCE00498142 /* Viento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Viento.h; sourceTree = "<group>"; };
+		49599CF71AAB316500498142 /* Niebla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Niebla.cpp; sourceTree = "<group>"; };
+		49599CF81AAB316500498142 /* Niebla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Niebla.h; sourceTree = "<group>"; };
+		49599CFA1AAB31BC00498142 /* Agua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Agua.cpp; sourceTree = "<group>"; };
+		49599CFB1AAB31BC00498142 /* Agua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agua.h; sourceTree = "<group>"; };
 		49A03F401A978B7D0094081E /* General.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = General.cpp; sourceTree = "<group>"; };
 		49A03F411A978B7D0094081E /* General.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
 		49A03F451A97914B0094081E /* Luz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Luz.cpp; sourceTree = "<group>"; };
@@ -298,6 +307,12 @@
 				49A03F411A978B7D0094081E /* General.h */,
 				49A03F451A97914B0094081E /* Luz.cpp */,
 				49A03F461A97914B0094081E /* Luz.h */,
+				49599CF41AAB2FCE00498142 /* Viento.cpp */,
+				49599CF51AAB2FCE00498142 /* Viento.h */,
+				49599CF71AAB316500498142 /* Niebla.cpp */,
+				49599CF81AAB316500498142 /* Niebla.h */,
+				49599CFA1AAB31BC00498142 /* Agua.cpp */,
+				49599CFB1AAB31BC00498142 /* Agua.h */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -688,6 +703,7 @@
 			files = (
 				49CE12291A0280070049A62B /* ofxOscBundle.cpp in Sources */,
 				49A03F4A1A97979F0094081E /* Info.cpp in Sources */,
+				49599CF91AAB316500498142 /* Niebla.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
@@ -696,6 +712,7 @@
 				49F8D4411A98900400F3D428 /* ArduinoWrapper.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
+				49599CFC1AAB31BC00498142 /* Agua.cpp in Sources */,
 				49CE12101A027CD70049A62B /* Assets.cpp in Sources */,
 				A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */,
 				28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */,
@@ -706,6 +723,7 @@
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				49CE121F1A027CD70049A62B /* Settings.cpp in Sources */,
 				49F8D4481A98A3AD00F3D428 /* ArduinoEvent.cpp in Sources */,
+				49599CF61AAB2FCE00498142 /* Viento.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */,
 				FB84AAF8D1B7A95266DB5C09 /* jsoncpp.cpp in Sources */,

@@ -37,6 +37,14 @@ void Assets::load(){
     viento_bien = new Animation("Personajes/Viento/01_viento_bien_", 3);
     viento_regular = new Animation("Personajes/Viento/02_viento_reg_", 3);
     viento_mal = new Animation("Personajes/Viento/03_viento_mal_", 3);
+    
+    niebla_bien = new Animation("Personajes/Niebla/01_niebla_bien_", 3);
+    niebla_regular = new Animation("Personajes/Niebla/02_niebla_regular_", 3);
+    niebla_mal = new Animation("Personajes/Niebla/03_niebla_mal_", 3);
+    
+    agua_bien = new Animation("Personajes/Agua/01_agua_bien_", 4);
+    agua_regular = new Animation("Personajes/Agua/02_agua_regular_", 3);
+    agua_mal = new Animation("Personajes/Agua/03_agua_mal_", 5);
 }
 
 void Assets::loadImage(string filename, ofImage &destination){

@@ -9,6 +9,12 @@
 #include "App.h"
 
 App::App(){
+    
+    states[LUZ] = BIEN;
+    states[VIENTO] = BIEN;
+    states[NIEBLA] = BIEN;
+    states[AGUA] = BIEN;
+    
     // Register events and actions
     ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
     ofAddListener(ofEvents().update, this, &App::update);    
@@ -49,10 +55,52 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
         case 'n':
             next();
             break;
+        case 'q':
+            states[LUZ] = (int)ofClamp(states[LUZ] + 1, 0, 2);
+            ofLogNotice() << "LUZ: " << states[LUZ];
+            break;
+        case 'a':
+            states[LUZ] = (int)ofClamp(states[LUZ] - 1, 0, 2);
+            ofLogNotice() << "LUZ: " << states[LUZ];
+            break;
+            
+        case 'w':
+            states[VIENTO] = (int)ofClamp(states[VIENTO] + 1, 0, 2);
+            ofLogNotice() << "VIENTO: " << states[VIENTO];
+            break;
+            
+        case 's':
+            states[VIENTO] = (int)ofClamp(states[VIENTO] - 1, 0, 2);
+            ofLogNotice() << "VIENTO: " << states[VIENTO];
+            break;
+            
+        case 'e':
+            states[NIEBLA] = (int)ofClamp(states[NIEBLA] + 1, 0, 2);
+            ofLogNotice() << "NIEBLA: " << states[NIEBLA];
+            break;
+            
+        case 'd':
+            states[NIEBLA] = (int)ofClamp(states[NIEBLA] - 1, 0, 2);
+            ofLogNotice() << "NIEBLA: " << states[NIEBLA];
+            break;
+            
+        case 'r':
+            states[AGUA] = (int)ofClamp(states[AGUA] + 1, 0, 2);
+            ofLogNotice() << "AGUA: " << states[AGUA];
+            break;
+        case 'f':
+            states[AGUA] = (int)ofClamp(states[AGUA] - 1, 0, 2);
+            ofLogNotice() << "AGUA: " << states[AGUA];
+            break;
+            
         default:
             break;
     }
 }
 
 void App::arduinoEvent(ArduinoEvent &e){
+}
+
+int App::getState(int state){
+    return states[state];
 }

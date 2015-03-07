@@ -36,6 +36,15 @@ public:
     Animation *viento_regular;
     Animation *viento_mal;
     
+    Animation *niebla_bien;
+    Animation *niebla_regular;
+    Animation *niebla_mal;
+    
+    
+    Animation *agua_bien;
+    Animation *agua_regular;
+    Animation *agua_mal;
+    
 private:
     static Assets* instance;
     Assets();

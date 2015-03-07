@@ -1,6 +1,6 @@
 #include "ofApp.h"
 #include "Settings.h"
-#include "Luz.h"
+#include "Viento.h"
 
 ofApp::ofApp(){
 }
@@ -10,9 +10,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
-    
-    app.setCurrentState(new Luz::Luz(&app));
-    
+    app.setCurrentState(new Viento(&app));
 }
 
 //--------------------------------------------------------------
@@ -29,7 +27,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     switch (key) {
-        case 'f':
+        case 'F':
             ofToggleFullscreen();
             break;
         case 'c':

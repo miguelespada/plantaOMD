@@ -7,6 +7,16 @@
 #include "ArduinoEvent.h"
 #include "ArduinoWrapper.h"
 
+#define MAL 0
+#define REGULAR 1
+#define BIEN 2
+
+#define LUZ 0
+#define NIEBLA 1
+#define AGUA 2
+#define VIENTO 3
+
+
 class App
 {
     
@@ -22,9 +32,12 @@ public:
     void next();
     void jump();
     void draw();
+    int getState(int state);
     
     ArduinoWrapper arduino;
     void arduinoEvent(ArduinoEvent &e);
+    
+    int states[4];
 };
 
 #endif
