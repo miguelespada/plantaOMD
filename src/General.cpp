@@ -17,8 +17,8 @@ void General::draw(){
     assets->agua->draw();
     assets->flor->draw();
     
-    assets->drawString("HUMEDAD:82%", 360, 776);
     assets->drawString("TEMPERATURA:20º", 330, 746);
+    assets->drawString("HUMEDAD:82%", 360, 776);
 };
 
 void General::update(){

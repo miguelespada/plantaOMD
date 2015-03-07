@@ -21,7 +21,10 @@ void Agua::draw(){
             break;
         default:
             break;
-    }};
+    }
+    
+    assets->drawString("AGUA:" + ofToString(app->getSoapValue(AGUA)), 380, 776);
+};
 
 void Agua::update(){
     

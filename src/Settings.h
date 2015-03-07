@@ -23,6 +23,7 @@ public:
     
     ofColor getBackgroundColor();
     int getAnimationRate();
+    int getSoapRefreshRate();
 
 private:
     static Settings* instance;

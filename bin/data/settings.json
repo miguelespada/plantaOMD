@@ -3,5 +3,6 @@
   "height" : 800,
   "scale" : 1,
   "animation_rate" : 30,
+  "soap_refresh_rate" : 60,
   "background" : "231F20"
 }

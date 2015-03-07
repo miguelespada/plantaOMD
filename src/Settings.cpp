@@ -43,3 +43,8 @@ ofColor Settings::getBackgroundColor(){
 int Settings::getAnimationRate(){
     return Settings::getData("animation_rate").asInt();
 }
+
+
+int Settings::getSoapRefreshRate(){
+    return Settings::getData("soap_refresh_rate").asInt();
+}

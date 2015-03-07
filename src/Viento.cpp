@@ -21,7 +21,11 @@ void Viento::draw(){
             break;
         default:
             break;
-    }};
+    }
+    
+    assets->drawString("VIENTO:" + ofToString(app->getSoapValue(VIENTO)), 380, 776);
+
+};
 
 void Viento::update(){
     assets->viento_bien->update();

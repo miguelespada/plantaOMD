@@ -7,25 +7,25 @@
 //
 
 #include "Soap.h"
+#include "Settings.h"
 
 Soap::Soap(){
     ofAddListener(ofEvents().update, this, &Soap::update);
 }
 
 void Soap::update(ofEventArgs &args){
-    
     if(json == NULL)
         ofSendMessage("[Info] SOAP NOT available");
     else
         ofSendMessage("[Info] SOAP available");
     
-    if(json == NULL || ofGetFrameNum() % (60 * 60) == 0){
+    if(json == NULL || ofGetFrameNum() % (60 * Settings::getInstance()->getSoapRefreshRate()) == 0){
         fetchData();
     }
 }
 
 int Soap::getValue(int index){
-    return json["d"][0]["Value"].asInt();
+    return json["d"][index]["Value"].asInt();
 }
 
 void Soap::fetchData(){    

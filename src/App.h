@@ -34,6 +34,7 @@ public:
     void jump();
     void draw();
     int getState(int state);
+    int getSoapValue(int index);
     
     ArduinoWrapper arduino;
     void arduinoEvent(ArduinoEvent &e);

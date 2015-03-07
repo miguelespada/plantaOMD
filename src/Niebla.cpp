@@ -21,7 +21,11 @@ void Niebla::draw(){
             break;
         default:
             break;
-    }};
+    }
+    
+    assets->drawString("NIEBLA:" + ofToString(app->getSoapValue(NIEBLA)), 380, 776);
+
+};
 
 void Niebla::update(){
     

@@ -106,3 +106,7 @@ void App::arduinoEvent(ArduinoEvent &e){
 int App::getState(int state){
     return states[state];
 }
+
+int App::getSoapValue(int index){
+    return soap->getValue(index);
+}

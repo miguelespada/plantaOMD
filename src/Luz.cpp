@@ -21,7 +21,10 @@ void Luz::draw(){
             break;
         default:
             break;
-    }};
+    }
+    
+    assets->drawString("LUZ:" + ofToString(app->getSoapValue(LUZ)), 380, 776);
+};
 
 void Luz::update(){
     
