@@ -19,6 +19,8 @@ App::App(){
     ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
     ofAddListener(ofEvents().update, this, &App::update);    
     ofAddListener(ArduinoEvent::digitalEvents, this, &App::arduinoEvent);
+    
+    soap = new Soap();
 }
 
 void App::setCurrentState(State *s){

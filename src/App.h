@@ -6,6 +6,7 @@
 #include "State.h"
 #include "ArduinoEvent.h"
 #include "ArduinoWrapper.h"
+#include "Soap.h"
 
 #define MAL 0
 #define REGULAR 1
@@ -38,6 +39,7 @@ public:
     void arduinoEvent(ArduinoEvent &e);
     
     int states[4];
+    Soap *soap;
 };
 
 #endif
