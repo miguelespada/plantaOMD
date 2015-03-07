@@ -1,6 +1,6 @@
 #include "ofApp.h"
 #include "Settings.h"
-#include "Viento.h"
+#include "General.h"
 
 ofApp::ofApp(){
 }
@@ -10,7 +10,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
-    app.setCurrentState(new Viento(&app));
+    app.setCurrentState(new General(&app));
 }
 
 //--------------------------------------------------------------

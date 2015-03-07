@@ -15,6 +15,10 @@ void General::draw(){
     assets->niebla->draw();
     assets->luz->draw();
     assets->agua->draw();
+    assets->flor->draw();
+    
+    assets->drawString("HUMEDAD:82%", 360, 776);
+    assets->drawString("TEMPERATURA:20º", 330, 746);
 };
 
 void General::update(){
@@ -22,6 +26,7 @@ void General::update(){
     assets->niebla->update();
     assets->luz->update();
     assets->agua->update();
+    assets->flor->update();
 }
 
 void General::next(){

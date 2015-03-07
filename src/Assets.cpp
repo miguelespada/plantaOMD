@@ -23,12 +23,15 @@ Assets* Assets::getInstance(){
 };
 
 void Assets::load(){
+    
+    
     loadImage("planta.png", planta);
     
     viento = new Animation("08 Viento/viento_0", 4);
     niebla = new Animation("07 Niebla/niebla_0", 4);
     agua = new Animation("05 Agua/Agua_0", 3);
     luz = new Animation("06 Luz/luz_0", 3);
+    flor = new Animation("09 flor/flor_0", 3);
     
     luz_bien = new Animation("Personajes/Luz/01_luz_bien_", 4);
     luz_regular = new Animation("Personajes/Luz/02_luz_regular_", 3);
@@ -44,12 +47,19 @@ void Assets::load(){
     
     agua_bien = new Animation("Personajes/Agua/01_agua_bien_", 4);
     agua_regular = new Animation("Personajes/Agua/02_agua_regular_", 3);
-    agua_mal = new Animation("Personajes/Agua/03_agua_mal_", 5);
+    agua_mal = new AnimationAguaMal("Personajes/Agua/03_agua_mal_", 5);
+    
+    font.loadFont("font/CPMono_v07 Light.otf", 10, true, true);
 }
 
 void Assets::loadImage(string filename, ofImage &destination){
     filename = Settings::getInstance()->assetsPath() + filename;
     destination.loadImage(filename);
     ofLogNotice() << "Loading: " << filename;
+}
+
+
+void Assets::drawString(string text, int x, int y){
+    font.drawString(text, x, y);
 }
 

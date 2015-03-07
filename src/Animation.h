@@ -12,6 +12,8 @@
 #include "ofMain.h"
 
 class Animation{
+
+protected:
     int max;
     int index;
     string path;
