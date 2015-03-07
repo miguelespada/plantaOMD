@@ -8,7 +8,7 @@ First::First(App *a){
 };
 
 void First::draw(){
-    ofBackground(0);
+    ofBackground(Settings::getInstance()->getBackgroundColor());
 };
 
 void First::update(){}

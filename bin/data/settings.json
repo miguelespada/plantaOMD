@@ -1,6 +1,7 @@
 {
-  "width" : 800,
-  "height" : 480,
+  "width" : 480,
+  "height" : 800,
   "scale" : 1,
-  "background" : "FF6A13"
+  "animation_rate" : 30,
+  "background" : "231F20"
 }

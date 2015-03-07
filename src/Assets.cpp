@@ -23,6 +23,16 @@ Assets* Assets::getInstance(){
 };
 
 void Assets::load(){
-    string assets_path = Settings::getInstance()->assetsPath();
-    ofLogNotice() << "Loading assets from: " << assets_path;
+    loadImage("planta.png", planta);
+    viento = new Animation("08 Viento/viento_0", 4);
+    niebla = new Animation("07 Niebla/niebla_0", 4);
+    agua = new Animation("05 Agua/Agua_0", 3);
+    luz = new Animation("06 Luz/luz_0", 3);
 }
+
+void Assets::loadImage(string filename, ofImage &destination){
+    filename = Settings::getInstance()->assetsPath() + filename;
+    destination.loadImage(filename);
+    ofLogNotice() << "Loading: " << filename;
+}
+

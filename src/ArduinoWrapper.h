@@ -26,13 +26,16 @@ class ArduinoWrapper
     
     void    setupArduino(const int & version);
     void    digitalPinChanged(const int & pinNum);
+    void    analogPinChanged(const int & pinNum);
     void    update();
+    void    read();
+    void    write();
     
 public:
     ArduinoWrapper();
     ~ArduinoWrapper();
     void update(ofEventArgs &args);
-    ofArduino	*arduino;
+    ofSerial	*arduino;
     
 };
 #endif /* defined(__planta__ArduinoWrapper__) */

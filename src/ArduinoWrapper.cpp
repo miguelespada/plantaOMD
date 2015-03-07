@@ -11,13 +11,13 @@
 ArduinoWrapper::ArduinoWrapper(){
     bArduinoConnected = false;
     bSetupArduino = false;
-    arduino = new ofArduino;
+    arduino = new ofSerial;
     ofAddListener(ofEvents().update, this, &ArduinoWrapper::update);
 }
 
 ArduinoWrapper::~ArduinoWrapper(){
     if(bArduinoConnected){
-        arduino->disconnect();
+        arduino->close();
         delete arduino;
     }
 }
@@ -27,62 +27,30 @@ string ArduinoWrapper::getPort(){
     vector <ofSerialDeviceInfo> deviceList =  serial.getDeviceList();
     for (int i=0; i<deviceList.size(); i++) {
         if(deviceList[i].getDeviceName().find("tty.usbmodem") != std::string::npos){
-            ofLogNotice() << "Found Arduino: " << deviceList[i].getDeviceName();
             return deviceList[i].getDeviceName();
         }
     }
-    ofLogNotice() << "Arduino NOT found ";
     return "";
 };
 
 void ArduinoWrapper::connectArduino(string deviceName){
-    bArduinoConnected = arduino->connect(deviceName, 57600);
-    ofAddListener(arduino->EInitialized, this, &ArduinoWrapper::setupArduino);
-    bSetupArduino= false;	// flag so we setup arduino when its ready, you don't need to touch this :)
-}
-
-//--------------------------------------------------------------
-void ArduinoWrapper::setupArduino(const int & version) {
-    // remove listener because we don't need it anymore
-    ofRemoveListener(arduino->EInitialized, this, &ArduinoWrapper::setupArduino);
-    
-    // it is now safe to send commands to the Arduino
-    bSetupArduino = true;
-    
-    // print firmware name and version to the console
-    ofLogNotice() << arduino->getFirmwareName();
-    ofLogNotice() << "firmata v" << arduino->getMajorFirmwareVersion() << "." << arduino->getMinorFirmwareVersion();
-    
-    configPins();
-    
-    // Listen for changes on the digital and analog pins
-    ofAddListener(arduino->EDigitalPinChanged, this, &ArduinoWrapper::digitalPinChanged);
-}
-
-//--------------------------------------------------------------
-void ArduinoWrapper::configPins(){
-    for(int i = 0; i < 4; i ++){
-        arduino->sendDigitalPinMode(i + 2, ARD_INPUT);
-        arduino->sendDigital(i  + 2 , ARD_HIGH);
-    }
-    arduino->sendDigitalPinMode(6, ARD_INPUT);
+    bArduinoConnected = arduino->setup(deviceName, 9600);
 }
 
 //--------------------------------------------------------------
 void ArduinoWrapper::update(){
-    
     if(bArduinoConnected) {
         ofSendMessage("[Info] Arduino connected");
-        arduino->update();
+        read();
     }
     else{
         ofSendMessage("[Info] Arduino NOT connected");
     }
     
-    if(ofGetFrameNum() % RECONNECT_RATE == 0){
+    if(ofGetFrameNum() % 90 == 0){
         string deviceName = getPort();
         if(deviceName == "" && bArduinoConnected){
-            arduino->disconnect();
+            arduino->close();
             bArduinoConnected = false;
         }
         if(deviceName != "" && !bArduinoConnected){
@@ -94,13 +62,30 @@ void ArduinoWrapper::update(){
 //--------------------------------------------------------------
 void ArduinoWrapper::update(ofEventArgs &args){
     update();
-    
-    ArduinoEvent event((int)ofRandom(5), (int)ofRandom(5));
-    ofNotifyEvent(ArduinoEvent::digitalEvents, event);
 }
 
 //--------------------------------------------------------------
-void  ArduinoWrapper::digitalPinChanged(const int & pinNum) {
-    
+void ArduinoWrapper::read(){
+    if ( arduino->available() > 0 )
+    {
+        int myByte = 0;
+        myByte = arduino->readByte();
+        if ( myByte == OF_SERIAL_NO_DATA ){
+            
+        }
+        else if ( myByte == OF_SERIAL_ERROR ){
+            ofLogError() << "Error reading Arduino";
+        }
+        else{
+            arduino->writeByte(1);
+        }
+    }
 }
+
+//--------------------------------------------------------------
+void ArduinoWrapper::write(){
+    arduino->writeByte(1);
+}
+
+
 

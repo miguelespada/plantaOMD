@@ -11,6 +11,7 @@
 
 #include "ofMain.h"
 #include "Settings.h"
+#include "Assets.h"
 
 class App;
 
@@ -18,6 +19,8 @@ class State
 {
 public:
     App *app;
+    Assets *assets;
+    
     float timer;
     virtual void next()=0;
     virtual void jump(){};

@@ -22,6 +22,7 @@ public:
     int getHeight();
     
     ofColor getBackgroundColor();
+    int getAnimationRate();
 
 private:
     static Settings* instance;

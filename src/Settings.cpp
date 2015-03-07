@@ -20,7 +20,7 @@ void Settings::load(){
 }
 
 string Settings::assetsPath(){
-    return ofToDataPath("assets/" );
+    return ofToDataPath("General/" );
 }
 
 Json::Value Settings::getData(string key){
@@ -38,4 +38,8 @@ int Settings::getHeight(){
 ofColor Settings::getBackgroundColor(){
     string color = Settings::getData("background").asString();
     return ofColor::fromHex(ofHexToInt("0x" + color));
+}
+
+int Settings::getAnimationRate(){
+    return Settings::getData("animation_rate").asInt();
 }

@@ -13,6 +13,7 @@
 		28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5928AA323F5C2690B06C837D /* UdpSocketWin.cpp */; };
 		3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 712B183BC00EBFFB1EEA5AB8 /* ofxRtMidiOut.cpp */; };
 		4903C5C519FE81DB007A152B /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4903C5C419FE81DB007A152B /* CoreMIDI.framework */; };
+		49599CF31AAB1DEA00498142 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49599CF21AAB1DEA00498142 /* Animation.cpp */; };
 		49A03F421A978B7D0094081E /* Idle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F401A978B7D0094081E /* Idle.cpp */; };
 		49A03F471A97914B0094081E /* First.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F451A97914B0094081E /* First.cpp */; };
 		49A03F4A1A97979F0094081E /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F481A97979F0094081E /* Info.cpp */; };
@@ -113,6 +114,8 @@
 		470CF04F1D4D1B38D5AA1797 /* ofxRtMidiOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRtMidiOut.h; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiOut.h; sourceTree = SOURCE_ROOT; };
 		48974F980F51769171D0B2F5 /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
 		4903C5C419FE81DB007A152B /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = ../../../../../../../../System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<group>"; };
+		49599CED1AAB159900498142 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		49599CF21AAB1DEA00498142 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		49A03F401A978B7D0094081E /* Idle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Idle.cpp; sourceTree = "<group>"; };
 		49A03F411A978B7D0094081E /* Idle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Idle.h; sourceTree = "<group>"; };
 		49A03F451A97914B0094081E /* First.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = First.cpp; sourceTree = "<group>"; };
@@ -278,6 +281,15 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
+		49599CEB1AAB158200498142 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				49599CED1AAB159900498142 /* Animation.h */,
+				49599CF21AAB1DEA00498142 /* Animation.cpp */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		49A03F431A978BC40094081E /* States */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +309,7 @@
 				49CE120D1A027CD70049A62B /* Settings.h */,
 				49CE11EF1A027CD70049A62B /* Assets.cpp */,
 				49CE11F01A027CD70049A62B /* Assets.h */,
+				49599CEB1AAB158200498142 /* Animations */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -697,6 +710,7 @@
 				BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */,
 				FB84AAF8D1B7A95266DB5C09 /* jsoncpp.cpp in Sources */,
 				49CE12141A027CD70049A62B /* App.cpp in Sources */,
+				49599CF31AAB1DEA00498142 /* Animation.cpp in Sources */,
 				BCC8D420CBA9217E437D2D76 /* ofxRtMidiIn.cpp in Sources */,
 				3AEFE4FA8AD5C72671AD07F8 /* ofxRtMidiOut.cpp in Sources */,
 				1A86B7721CAEBC6F1C572C45 /* ofxBaseMidi.cpp in Sources */,
