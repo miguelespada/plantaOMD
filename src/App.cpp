@@ -19,6 +19,7 @@ App::App(){
     ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
     ofAddListener(ofEvents().update, this, &App::update);    
     ofAddListener(ArduinoEvent::digitalEvents, this, &App::arduinoEvent);
+    ofAddListener(SoapEvent::SoapEvents, this, &App::soapEvent);
     
     soap = new Soap();
 }
@@ -98,6 +99,12 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
         default:
             break;
     }
+}
+
+void App::soapEvent(SoapEvent &e){
+    if(e.value < 50) states[e.index] = MAL;
+    else if(e.value < 100) states[e.index] = REGULAR;
+    else states[e.index] = BIEN;
 }
 
 void App::arduinoEvent(ArduinoEvent &e){

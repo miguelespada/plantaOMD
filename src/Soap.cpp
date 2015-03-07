@@ -7,6 +7,7 @@
 //
 
 #include "Soap.h"
+#include "SoapEvent.h"
 #include "Settings.h"
 
 Soap::Soap(){
@@ -21,6 +22,11 @@ void Soap::update(ofEventArgs &args){
     
     if(json == NULL || ofGetFrameNum() % (60 * Settings::getInstance()->getSoapRefreshRate()) == 0){
         fetchData();
+        
+        for(int i = 0; i < 4; i ++){
+            SoapEvent event(i, json["d"][i]["Value"].asInt());
+            ofNotifyEvent(SoapEvent::SoapEvents, event);
+        }
     }
 }
 
@@ -34,4 +40,5 @@ void Soap::fetchData(){
                                --data \"\" \
                                http://www.omd.es/wstimereport/wscontrol.asmx/GetKPIs ");
     json.parse(response);
+    
 }

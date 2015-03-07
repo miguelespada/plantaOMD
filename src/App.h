@@ -5,6 +5,7 @@
 #include "ofMain.h"
 #include "State.h"
 #include "ArduinoEvent.h"
+#include "SoapEvent.h"
 #include "ArduinoWrapper.h"
 #include "Soap.h"
 
@@ -38,6 +39,7 @@ public:
     
     ArduinoWrapper arduino;
     void arduinoEvent(ArduinoEvent &e);
+    void soapEvent(SoapEvent &e);
     
     int states[4];
     Soap *soap;
