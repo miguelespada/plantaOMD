@@ -13,8 +13,8 @@
 Animation::Animation(string path, int max){
     Animation::max = max;
     Animation::path = path;
-    index = 0;
-    images = new ofImage[max];
+    Animation::index = 0;
+    Animation::images = new ofImage[max];
     loadImages();
 }
 

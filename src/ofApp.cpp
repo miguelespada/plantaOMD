@@ -1,5 +1,5 @@
 #include "ofApp.h"
-#include "Idle.h"
+#include "General.h"
 #include "Settings.h"
 
 ofApp::ofApp(){
@@ -11,7 +11,7 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
     
-    app.setCurrentState(new IDLE(&app));
+    app.setCurrentState(new General(&app));
     
 }
 

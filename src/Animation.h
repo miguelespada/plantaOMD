@@ -11,10 +11,7 @@
 
 #include "ofMain.h"
 
-class Assets;
-class Animation
-{
-    
+class Animation{
     int max;
     int index;
     string path;

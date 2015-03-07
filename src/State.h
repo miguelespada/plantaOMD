@@ -30,4 +30,4 @@ public:
 };
 
 
-#endif /* defined(__planta__Idle__) */
+#endif

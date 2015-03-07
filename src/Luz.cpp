@@ -1,19 +1,19 @@
-#include "First.h"
+#include "Luz.h"
 #include "App.h"
-#include "Idle.h"
+#include "General.h"
 
-First::First(App *a){
+Luz::Luz(App *a){
     app = a;
     ofLogNotice() << "State: " << toString();
 };
 
-void First::draw(){
+void Luz::draw(){
     ofBackground(Settings::getInstance()->getBackgroundColor());
 };
 
-void First::update(){}
+void Luz::update(){}
 
-void First::next(){
-    app->setCurrentState(new IDLE(app));
+void Luz::next(){
+    app->setCurrentState(new General(app));
     delete this;
 };
