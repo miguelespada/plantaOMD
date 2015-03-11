@@ -328,6 +328,26 @@
 			name = States;
 			sourceTree = "<group>";
 		};
+		49B0D8911AAB96080053271E /* Soap */ = {
+			isa = PBXGroup;
+			children = (
+				49FB4BF91AAB71A4000A7324 /* Soap.cpp */,
+				49FB4BFA1AAB71A4000A7324 /* Soap.h */,
+				49FB4BFC1AAB79D7000A7324 /* SoapEvent.cpp */,
+				49FB4BFD1AAB79D7000A7324 /* SoapEvent.h */,
+			);
+			name = Soap;
+			sourceTree = "<group>";
+		};
+		49B0D8921AAB96180053271E /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				49A03F481A97979F0094081E /* Info.cpp */,
+				49A03F491A97979F0094081E /* Info.h */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		49C4A1A61A06743C000D8844 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,14 +363,8 @@
 		49C4A1A71A067461000D8844 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				49A03F481A97979F0094081E /* Info.cpp */,
-				49A03F491A97979F0094081E /* Info.h */,
 				49CE11F71A027CD70049A62B /* App.cpp */,
 				49CE11F81A027CD70049A62B /* App.h */,
-				49FB4BF91AAB71A4000A7324 /* Soap.cpp */,
-				49FB4BFA1AAB71A4000A7324 /* Soap.h */,
-				49FB4BFC1AAB79D7000A7324 /* SoapEvent.cpp */,
-				49FB4BFD1AAB79D7000A7324 /* SoapEvent.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -577,6 +591,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				49B0D8921AAB96180053271E /* Info */,
+				49B0D8911AAB96080053271E /* Soap */,
 				49F8D4421A98900A00F3D428 /* Arduino */,
 				49C4A1A71A067461000D8844 /* App */,
 				49C4A1A61A06743C000D8844 /* Assets */,

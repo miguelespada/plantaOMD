@@ -9,7 +9,7 @@ Niebla::Niebla(App *a){
 
 void Niebla::draw(){
     ofBackground(Settings::getInstance()->getBackgroundColor());
-    switch (app->getState(NIEBLA)) {
+    switch (app->getPlantState(NIEBLA)) {
         case BIEN:
             assets->niebla_bien->draw();
             break;
@@ -22,13 +22,10 @@ void Niebla::draw(){
         default:
             break;
     }
-    
-    assets->drawString("NIEBLA:" + ofToString(app->getSoapValue(NIEBLA)), 380, 776);
-
+    assets->drawString("NIEBLA:" + ofToString(app->getPlantValue(NIEBLA)), 380, 776);
 };
 
 void Niebla::update(){
-    
     assets->niebla_bien->update();
     assets->niebla_regular->update();
     assets->niebla_mal->update();

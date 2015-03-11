@@ -9,11 +9,11 @@ ofApp::ofApp(){
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
+
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
-    ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
     app.setCurrentState(new General(&app));
- 
     
 }
 
@@ -44,6 +44,3 @@ void ofApp::keyPressed(int key){
             break;
     }
 }
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){}

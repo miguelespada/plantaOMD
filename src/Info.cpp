@@ -9,9 +9,8 @@
 #include "Info.h"
 
 Info::Info(){
-    ofAddListener(ofEvents().keyPressed, this, &Info::keyPressed);
     ofRegisterGetMessages(this);
-    info = "";
+    ofAddListener(ofEvents().keyPressed, this, &Info::keyPressed);
 };
 
 void Info::draw(){
@@ -24,7 +23,7 @@ void Info::draw(){
     ofDrawBitmapString(ofToString(ofGetMouseX()) + ", " + ofToString(ofGetMouseY()), ofGetMouseX() + 5, ofGetMouseY() + 15);
     ofDrawBitmapString("fps: " + ofToString((int)ofGetFrameRate()), 5, 15);
     ofDrawBitmapString(info, 5, 30);
-    info = "";
+    info.clear();
     ofPopStyle();
 };
 

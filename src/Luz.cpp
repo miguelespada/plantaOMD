@@ -9,7 +9,7 @@ Luz::Luz(App *a){
 
 void Luz::draw(){
     ofBackground(Settings::getInstance()->getBackgroundColor());
-    switch (app->getState(LUZ)) {
+    switch (app->getPlantState(LUZ)) {
         case BIEN:
             assets->luz_bien->draw();
             break;
@@ -23,7 +23,7 @@ void Luz::draw(){
             break;
     }
     
-    assets->drawString("LUZ:" + ofToString(app->getSoapValue(LUZ)), 380, 776);
+    assets->drawString("LUZ:" + ofToString(app->getPlantValue(LUZ)), 380, 776);
 };
 
 void Luz::update(){

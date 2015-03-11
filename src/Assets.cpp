@@ -24,7 +24,6 @@ Assets* Assets::getInstance(){
 
 void Assets::load(){
     
-    
     loadImage("planta.png", planta);
     
     viento = new Animation("08 Viento/viento_0", 4);
@@ -45,8 +44,8 @@ void Assets::load(){
     niebla_regular = new Animation("Personajes/Niebla/02_niebla_regular_", 3);
     niebla_mal = new Animation("Personajes/Niebla/03_niebla_mal_", 3);
     
-    agua_bien = new Animation("Personajes/Agua/01_agua_bien_", 4);
-    agua_regular = new Animation("Personajes/Agua/02_agua_regular_", 3);
+    agua_bien = new Animation("Personajes/Agua/01_agua_bien_", 5);
+    agua_regular = new Animation("Personajes/Agua/02_agua_regular_", 5);
     agua_mal = new AnimationAguaMal("Personajes/Agua/03_agua_mal_", 5);
     
     font.loadFont("font/CPMono_v07 Light.otf", 10, true, true);

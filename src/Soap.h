@@ -15,6 +15,7 @@
 class Soap
 {
     void fetchData();
+    void broadCastData();
     ofxJSONElement json;
     
 public:

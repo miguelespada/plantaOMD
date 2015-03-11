@@ -9,7 +9,7 @@ Viento::Viento(App *a){
 
 void Viento::draw(){
     ofBackground(Settings::getInstance()->getBackgroundColor());
-    switch (app->getState(VIENTO)) {
+    switch (app->getPlantState(VIENTO)) {
         case BIEN:
             assets->viento_bien->draw();
             break;
@@ -23,7 +23,7 @@ void Viento::draw(){
             break;
     }
     
-    assets->drawString("VIENTO:" + ofToString(app->getSoapValue(VIENTO)), 380, 776);
+    assets->drawString("VIENTO:" + ofToString(app->getPlantValue(VIENTO)), 380, 776);
 
 };
 

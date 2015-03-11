@@ -8,5 +8,4 @@
 
 #include "SoapEvent.h"
 
-
 ofEvent <SoapEvent> SoapEvent::SoapEvents;

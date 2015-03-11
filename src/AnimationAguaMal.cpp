@@ -15,11 +15,9 @@ AnimationAguaMal::AnimationAguaMal(string path, int max)
 :Animation(path, max){
 }
 
-
 void AnimationAguaMal::draw(){
-    draw_background();
-    if(index > 1)
-        images[2].draw(0,0);
-    
-    images[index + 1].draw(0,0);
+    if(index == 0)
+        draw_background();
+    else
+        images[index + 1].draw(0,0);
 }

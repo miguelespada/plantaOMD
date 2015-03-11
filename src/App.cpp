@@ -9,19 +9,11 @@
 #include "App.h"
 
 App::App(){
-    
-    states[LUZ] = BIEN;
-    states[VIENTO] = BIEN;
-    states[NIEBLA] = BIEN;
-    states[AGUA] = BIEN;
-    
     // Register events and actions
     ofAddListener(ofEvents().keyPressed, this, &App::keyPressed);
     ofAddListener(ofEvents().update, this, &App::update);    
     ofAddListener(ArduinoEvent::digitalEvents, this, &App::arduinoEvent);
     ofAddListener(SoapEvent::SoapEvents, this, &App::soapEvent);
-    
-    soap = new Soap();
 }
 
 void App::setCurrentState(State *s){
@@ -59,41 +51,33 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
             next();
             break;
         case 'q':
-            states[LUZ] = (int)ofClamp(states[LUZ] + 1, 0, 2);
-            ofLogNotice() << "LUZ: " << states[LUZ];
+            states[LUZ].inc(LUZ);
             break;
         case 'a':
-            states[LUZ] = (int)ofClamp(states[LUZ] - 1, 0, 2);
-            ofLogNotice() << "LUZ: " << states[LUZ];
+            states[LUZ].dec(LUZ);
             break;
-            
+        
         case 'w':
-            states[VIENTO] = (int)ofClamp(states[VIENTO] + 1, 0, 2);
-            ofLogNotice() << "VIENTO: " << states[VIENTO];
+            states[VIENTO].inc(VIENTO);
             break;
             
         case 's':
-            states[VIENTO] = (int)ofClamp(states[VIENTO] - 1, 0, 2);
-            ofLogNotice() << "VIENTO: " << states[VIENTO];
+            states[VIENTO].dec(VIENTO);
             break;
             
         case 'e':
-            states[NIEBLA] = (int)ofClamp(states[NIEBLA] + 1, 0, 2);
-            ofLogNotice() << "NIEBLA: " << states[NIEBLA];
+            states[NIEBLA].inc(NIEBLA);
             break;
             
         case 'd':
-            states[NIEBLA] = (int)ofClamp(states[NIEBLA] - 1, 0, 2);
-            ofLogNotice() << "NIEBLA: " << states[NIEBLA];
+            states[NIEBLA].dec(NIEBLA);
             break;
             
         case 'r':
-            states[AGUA] = (int)ofClamp(states[AGUA] + 1, 0, 2);
-            ofLogNotice() << "AGUA: " << states[AGUA];
+            states[AGUA].inc(AGUA);
             break;
         case 'f':
-            states[AGUA] = (int)ofClamp(states[AGUA] - 1, 0, 2);
-            ofLogNotice() << "AGUA: " << states[AGUA];
+            states[AGUA].dec(AGUA);
             break;
             
         default:
@@ -102,20 +86,23 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
 }
 
 void App::soapEvent(SoapEvent &e){
-    if(e.value < 50) states[e.index] = MAL;
-    else if(e.value < 100) states[e.index] = REGULAR;
-    else states[e.index] = BIEN;
+    if(e.value < 50)
+        states[e.index].value = MAL;
+    else if(e.value < 100)
+        states[e.index].value = REGULAR;
+    else
+        states[e.index].value = BIEN;
     
-    ofLogNotice() << "Set state " << e.index << " -> " << e.value;
+    ofLogNotice() << "Set state " << states[e.index].toString(e.index);
 }
 
 void App::arduinoEvent(ArduinoEvent &e){
 }
 
-int App::getState(int state){
-    return states[state];
+int App::getPlantState(int index){
+    return states[index].state;
 }
 
-int App::getSoapValue(int index){
-    return soap->getValue(index);
+int App::getPlantValue(int index){
+    return states[index].value;
 }

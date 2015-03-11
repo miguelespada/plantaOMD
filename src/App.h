@@ -6,8 +6,6 @@
 #include "State.h"
 #include "ArduinoEvent.h"
 #include "SoapEvent.h"
-#include "ArduinoWrapper.h"
-#include "Soap.h"
 
 #define MAL 0
 #define REGULAR 1
@@ -18,11 +16,55 @@
 #define AGUA 2
 #define VIENTO 3
 
-
 class App
 {
+    class PlantState{
+    public:
+        int value;
+        int state;
+        
+        PlantState(){
+            state = BIEN;
+            value = 100;
+        }
+        
+        string toString(int index){
+            return indexToString(index) + ": " + ofToString(state) + " -> " + ofToString(value);
+        }
+        
+        void inc(int index){
+            state = (int)ofClamp(state + 1, 0, 2);
+            ofLogNotice() << indexToString(index) << ":" <<  state;
+        }
+        
+        void dec(int index){
+            state = (int)ofClamp(state - 1, 0, 2);
+            ofLogNotice() << indexToString(index) << ":" << state;
+        }
+        
+        static string indexToString(int index){
+            switch (index) {
+                case LUZ:
+                    return "Luz";
+                    break;
+                case NIEBLA:
+                    return "Niebla";
+                    break;
+                case VIENTO:
+                    return "Viento";
+                    break;
+                case AGUA:
+                    return "Agua";
+                    break;
+                default:
+                    break;
+            }
+        }
+        
+    };
     
 public:
+    
     App();    
     class State *current_state;
     
@@ -34,15 +76,15 @@ public:
     void next();
     void jump();
     void draw();
-    int getState(int state);
-    int getSoapValue(int index);
     
-    ArduinoWrapper arduino;
+    int getPlantState(int state);
+    int getPlantValue(int index);
+    
     void arduinoEvent(ArduinoEvent &e);
     void soapEvent(SoapEvent &e);
     
-    int states[4];
-    Soap *soap;
+    PlantState states[4];
 };
+
 
 #endif
