@@ -15,6 +15,7 @@
 #include "Settings.h"
 #include "Animation.h"
 #include "AnimationAguaMal.h"
+#include "AnimationFlor.h"
 
 
 class Assets{
@@ -47,7 +48,7 @@ public:
     Animation *agua_regular;
     AnimationAguaMal *agua_mal;
     
-    Animation *flor;
+    AnimationFlor *flor;
     
     ofTrueTypeFont fontPlainSmall;
     ofTrueTypeFont fontPlainMedium;

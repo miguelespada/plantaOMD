@@ -5,7 +5,7 @@
 //========================================================================
 
 class General: public State{
-    void drawElement(string element, int amount, int x, int y, ofColor color, bool bLeft = true);
+    void drawElement(string element, int amount, int x, int y, ofColor color);
 
 public:
     General(App *g);

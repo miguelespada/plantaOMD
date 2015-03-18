@@ -22,7 +22,8 @@ void Luz::draw(){
             break;
     }
     
-    assets->drawString("LUZ:" + ofToString(app->getPlantValue(LUZ)), 380, 776, assets->fontPlainSmall);
+    
+    drawValue("LUZ:" + ofToString(app->getPlantValue(LUZ)) + "%", 775);
 };
 
 void Luz::update(){

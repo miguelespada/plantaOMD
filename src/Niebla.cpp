@@ -21,7 +21,9 @@ void Niebla::draw(){
         default:
             break;
     }
-    assets->drawString("NIEBLA:" + ofToString(app->getPlantValue(NIEBLA)), 380, 776, assets->fontPlainSmall);
+    
+    drawValue("HUMEDAD:" + ofToString(app->getPlantValue(NIEBLA)) + "%", 775);
+    
 };
 
 void Niebla::update(){

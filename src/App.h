@@ -64,20 +64,36 @@ class App
     };
     
     class Slogan{
-        int x = 0;
-        string s = "AHORA SI! ¡ESTOY ALUMBRADA Y REBOSANTE DE ENERGIA!";
+        int x;
+        
+        string s = "¡AHORA SI! ¡ESTOY ALUMBRADA Y REBOSANTE DE ENERGIA!";
+        
+        void init(){
+            x = Assets::getInstance()->fontPlainBig.stringWidth(s) / 2 + 100;
+        }
         
         public:
+        Slogan(){
+            init();
+        }
+        
         void draw(){
             ofPushStyle();
             ofSetColor(Settings::getInstance()->getBlueColor());
-            Assets::getInstance()->drawString(s, x, 60, Assets::getInstance()->fontPlainBig);
+            Assets::getInstance()->drawString(s, x, 58, Assets::getInstance()->fontPlainBig);
+            
+            ofSetColor(Settings::getInstance()->getBackgroundColor());
+            ofRect(0, 40, 42, 25);
+            ofRect(ofGetWidth() - 56, 40, 60, 25);
             ofPopStyle();
         }
         
         void update(){
             if(ofGetFrameNum() % Settings::getInstance()->getAnimationRate() == 0){
-                x -= 4;
+                x -= 8;
+                if(x < - Assets::getInstance()->fontPlainBig.stringWidth(s)){
+                    init();
+                }
             }
         };
     };

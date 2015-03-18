@@ -20,6 +20,7 @@
 		49A03F421A978B7D0094081E /* General.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F401A978B7D0094081E /* General.cpp */; };
 		49A03F471A97914B0094081E /* Luz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F451A97914B0094081E /* Luz.cpp */; };
 		49A03F4A1A97979F0094081E /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F481A97979F0094081E /* Info.cpp */; };
+		49BF93FD1AB9B32100FFA272 /* AnimationFlor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49BF93FB1AB9B32100FFA272 /* AnimationFlor.cpp */; };
 		49CE12101A027CD70049A62B /* Assets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11EF1A027CD70049A62B /* Assets.cpp */; };
 		49CE12141A027CD70049A62B /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11F71A027CD70049A62B /* App.cpp */; };
 		49CE12171A027CD70049A62B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11FD1A027CD70049A62B /* main.cpp */; };
@@ -134,6 +135,8 @@
 		49A03F461A97914B0094081E /* Luz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Luz.h; sourceTree = "<group>"; };
 		49A03F481A97979F0094081E /* Info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Info.cpp; sourceTree = "<group>"; };
 		49A03F491A97979F0094081E /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
+		49BF93FB1AB9B32100FFA272 /* AnimationFlor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationFlor.cpp; sourceTree = "<group>"; };
+		49BF93FC1AB9B32100FFA272 /* AnimationFlor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationFlor.h; sourceTree = "<group>"; };
 		49CE11EF1A027CD70049A62B /* Assets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assets.cpp; sourceTree = "<group>"; };
 		49CE11F01A027CD70049A62B /* Assets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assets.h; sourceTree = "<group>"; };
 		49CE11F71A027CD70049A62B /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				49599CF21AAB1DEA00498142 /* Animation.cpp */,
 				49FB4BA51AAB42BE000A7324 /* AnimationAguaMal.cpp */,
 				49FB4BA61AAB42BE000A7324 /* AnimationAguaMal.h */,
+				49BF93FB1AB9B32100FFA272 /* AnimationFlor.cpp */,
+				49BF93FC1AB9B32100FFA272 /* AnimationFlor.h */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				49CE12291A0280070049A62B /* ofxOscBundle.cpp in Sources */,
 				49A03F4A1A97979F0094081E /* Info.cpp in Sources */,
 				49599CF91AAB316500498142 /* Niebla.cpp in Sources */,
+				49BF93FD1AB9B32100FFA272 /* AnimationFlor.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,

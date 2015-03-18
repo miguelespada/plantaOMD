@@ -22,7 +22,9 @@ void Viento::draw(){
             break;
     }
     
-    assets->drawString("VIENTO:" + ofToString(app->getPlantValue(VIENTO)), 380, 776, assets->fontPlainSmall);
+    
+    drawValue("VIENTO:" + ofToString(app->getPlantValue(VIENTO)) + "%", 775);
+    
 
 };
 

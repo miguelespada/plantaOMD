@@ -22,7 +22,7 @@ void Agua::draw(){
             break;
     }
     
-    assets->drawString("AGUA:" + ofToString(app->getPlantValue(AGUA)), 380, 776, assets->fontPlainSmall);
+    drawValue("NUTRIENTES:" + ofToString(app->getPlantValue(AGUA)) + "%", 775);
 };
 
 void Agua::update(){

@@ -28,9 +28,9 @@ void Assets::load(){
     
     viento = new Animation("08 Viento/viento_0", 4);
     niebla = new Animation("07 Niebla/niebla_0", 4);
-    agua = new Animation("05 Agua/Agua_0", 3);
+    agua = new Animation("05 Agua/Agua_0", 7);
     luz = new Animation("06 Luz/luz_0", 3);
-    flor = new Animation("09 flor/flor_0", 3);
+    flor = new AnimationFlor("09 flor/flor_0", 3);
     
     luz_bien = new Animation("Personajes/Luz/01_luz_bien_", 4);
     luz_regular = new Animation("Personajes/Luz/02_luz_regular_", 3);
