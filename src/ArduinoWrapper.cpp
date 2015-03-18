@@ -112,14 +112,53 @@ void ArduinoWrapper::write(){
 void ArduinoWrapper::keyPressed (ofKeyEventArgs& eventArgs){
     switch (eventArgs.key) {
         case '1':
-            arduino->writeByte(13);
+            arduino->writeByte(2);
             arduino->writeByte(1);
-            ofLogNotice() << "ON 13";
+            ofLogNotice() << "ON 2";
             break;
         case '2':
-            arduino->writeByte(13);
+            arduino->writeByte(2);
             arduino->writeByte(0);
-            ofLogNotice() << "OFF 13";
+            ofLogNotice() << "OFF 2";
+            break;
+        case '3':
+            arduino->writeByte(3);
+            arduino->writeByte(1);
+            ofLogNotice() << "ON 3";
+            break;
+        case '4':
+            arduino->writeByte(3);
+            arduino->writeByte(0);
+            ofLogNotice() << "OFF 3";
+            break;
+        case '5':
+            arduino->writeByte(4);
+            arduino->writeByte(1);
+            ofLogNotice() << "ON 4";
+            break;
+        case '6':
+            arduino->writeByte(4);
+            arduino->writeByte(0);
+            ofLogNotice() << "OFF 4";
+            break;
+        case '7':
+            arduino->writeByte(5);
+            arduino->writeByte(1);
+            ofLogNotice() << "ON 5";
+            break;
+        case '8':
+            arduino->writeByte(5);
+            arduino->writeByte(0);
+            ofLogNotice() << "OFF 5";
+            break;
+        case '9':
+            int r = ofRandom(255);
+            int g = ofRandom(255);
+            int b = ofRandom(255);
+            arduino->writeByte(6);
+            arduino->writeByte(r);
+            arduino->writeByte(g);
+            arduino->writeByte(b);  
             break;
     }
 }
