@@ -27,8 +27,8 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofPushMatrix();
-//    ofTranslate(ofGetWidth(), 0);
-//    ofRotate(90);
+  //  ofTranslate(ofGetWidth(), 0);
+  //  ofRotate(90);
     app.draw();
     ofPopMatrix();
     info.draw();

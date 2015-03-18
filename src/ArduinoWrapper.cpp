@@ -13,6 +13,8 @@ ArduinoWrapper::ArduinoWrapper(){
     bSetupArduino = false;
     arduino = new ofSerial;
     ofAddListener(ofEvents().update, this, &ArduinoWrapper::update);
+    ofAddListener(ofEvents().keyPressed, this, &ArduinoWrapper::keyPressed);
+
 }
 
 ArduinoWrapper::~ArduinoWrapper(){
@@ -69,6 +71,7 @@ void ArduinoWrapper::read(){
     if ( arduino->available() > 0 )
     {
         int myByte = 0;
+        
         myByte = arduino->readByte();
         if ( myByte == OF_SERIAL_NO_DATA ){
             
@@ -77,9 +80,27 @@ void ArduinoWrapper::read(){
             ofLogError() << "Error reading Arduino";
         }
         else{
-            arduino->writeByte(1);
+            if(char(myByte) == '\n' ){
+                processData();
+                data.clear();
+            }
+            else{
+                data += char(myByte);
+            }
         }
     }
+}
+
+void ArduinoWrapper::processData(){
+    ofLogNotice() << "RECEIVED: " << data;
+    vector <string> tokens = ofSplitString(data, ",");
+    
+    ArduinoEvent event("Temperature", ofToInt(tokens[0]));
+    ofNotifyEvent(ArduinoEvent::digitalEvents, event);
+    
+    ArduinoEvent event2("Humidity", ofToInt(tokens[1]));
+    ofNotifyEvent(ArduinoEvent::digitalEvents, event2);
+    
 }
 
 //--------------------------------------------------------------
@@ -87,5 +108,20 @@ void ArduinoWrapper::write(){
     arduino->writeByte(1);
 }
 
+
+void ArduinoWrapper::keyPressed (ofKeyEventArgs& eventArgs){
+    switch (eventArgs.key) {
+        case '1':
+            arduino->writeByte(13);
+            arduino->writeByte(1);
+            ofLogNotice() << "ON 13";
+            break;
+        case '2':
+            arduino->writeByte(13);
+            arduino->writeByte(0);
+            ofLogNotice() << "OFF 13";
+            break;
+    }
+}
 
 

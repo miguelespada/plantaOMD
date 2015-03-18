@@ -4,6 +4,7 @@
 #include "App.h"
 #include "Info.h"
 #include "Soap.h"
+#include "ArduinoWrapper.h"
 
 class ofApp : public ofBaseApp{
 public:
@@ -18,6 +19,8 @@ public:
     App app;
     Info info;
     Soap soap;
+    ArduinoWrapper arduino;
+    
 };
 
 

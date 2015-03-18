@@ -101,6 +101,11 @@ void App::soapEvent(SoapEvent &e){
 }
 
 void App::arduinoEvent(ArduinoEvent &e){
+    if(e.key == "Temperature")
+        temperature = e.value;
+    else
+        humidity = e.value;
+        
 }
 
 int App::getPlantState(int index){
@@ -109,4 +114,12 @@ int App::getPlantState(int index){
 
 int App::getPlantValue(int index){
     return states[index].value;
+}
+
+int App::getTemperature(){
+    return temperature;
+}
+
+int App::getHumidity(){
+    return humidity;
 }

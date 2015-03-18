@@ -30,6 +30,10 @@ class ArduinoWrapper
     void    update();
     void    read();
     void    write();
+    void    processData();
+    
+    string  data;
+    void keyPressed(ofKeyEventArgs& eventArgs);
     
 public:
     ArduinoWrapper();

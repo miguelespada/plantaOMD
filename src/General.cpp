@@ -16,8 +16,8 @@ void General::draw(){
     assets->flor->draw();
     
     ofSetColor(Settings::getInstance()->getGrayColor());
-    assets->drawString("TEMPERATURA:20º", 330, 746, assets->fontPlainSmall);
-    assets->drawString("HUMEDAD:99%", 360, 776, assets->fontPlainSmall);
+    assets->drawString("TEMPERATURA:" + ofToString(app->getTemperature())  + "º", 330, 746, assets->fontPlainSmall);
+    assets->drawString("HUMEDAD:" + ofToString(app->getHumidity())  + "%", 360, 776, assets->fontPlainSmall);
     
     drawElement("HUMEDAD", app->getPlantValue(NIEBLA), 222, 675, Settings::getInstance()->getWhiteColor());
     drawElement("NUTRIENTES", app->getPlantValue(AGUA), 8, 528, Settings::getInstance()->getCyanColor());

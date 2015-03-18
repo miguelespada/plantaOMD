@@ -37,9 +37,9 @@ public:
         
         ofSetColor(Settings::getInstance()->getBackgroundColor());
         
-        ofRect(ofGetWidth() - 200, ofGetHeight() - 80, 200, 80);
+        ofRect(Settings::getInstance()->getWidth()  - 200, Settings::getInstance()->getHeight()  - 80, 200, 80);
         
-        ofTranslate(ofGetWidth() - w - 20, y);
+        ofTranslate(Settings::getInstance()->getWidth() - w - 20, y);
         
         ofNoFill();
         

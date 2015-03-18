@@ -116,12 +116,17 @@ public:
     
     int getPlantState(int state);
     int getPlantValue(int index);
+    int getTemperature();
+    int getHumidity();
     
     void arduinoEvent(ArduinoEvent &e);
     void soapEvent(SoapEvent &e);
     
     PlantState states[4];
     Slogan slogan;
+    
+    int temperature = 0;
+    int humidity = 0;
 };
 
 

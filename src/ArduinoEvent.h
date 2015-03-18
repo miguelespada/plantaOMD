@@ -15,12 +15,12 @@ class ArduinoEvent : public ofEventArgs {
     
 public:
     
-    int pin;
+    string key;
     int value;
     
     ArduinoEvent() {}
-    ArduinoEvent(int _pin, int _value) {
-        pin = _pin;
+    ArduinoEvent(string _key, int _value) {
+        key = _key;
         value = _value;
     }
     
