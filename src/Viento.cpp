@@ -33,6 +33,8 @@ void Viento::update(){
     assets->viento_bien->update();
     assets->viento_regular->update();
     assets->viento_mal->update();
+    app->setSlogan(VIENTO);
+
     
     
     if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){

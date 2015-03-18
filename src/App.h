@@ -18,6 +18,7 @@
 
 class App
 {
+    
     class PlantState{
     public:
         int value;
@@ -27,19 +28,24 @@ class App
             state = BIEN;
             value = 100;
         }
-        
-        string toString(int index){
-            return indexToString(index) + ": " + ofToString(state) + " -> " + ofToString(value);
-        }
-        
+    
         void inc(int index){
             state = (int)ofClamp(state + 1, 0, 2);
-            ofLogNotice() << indexToString(index) << "->" <<  stateToString(state);
+            change(index);
         }
         
         void dec(int index){
             state = (int)ofClamp(state - 1, 0, 2);
-            ofLogNotice() << indexToString(index) << "->" << stateToString(state);
+            change(index);
+
+        }
+        
+        void change(int index){
+            ofLogNotice() << toString(index);
+        }
+        
+        string toString(int index){
+            return indexToString(index) + "_" + stateToString(state);
         }
         
         static string indexToString(int index){
@@ -60,6 +66,7 @@ class App
                     break;
             }
         }
+        
         static string stateToString(int state){
             switch (state) {
                 case 0:
@@ -81,15 +88,20 @@ class App
     class Slogan{
         int x;
         
-        string s = "¡AHORA SI! ¡ESTOY ALUMBRADA Y REBOSANTE DE ENERGIA!";
+        string s = "";
         
         void init(){
             x = Assets::getInstance()->fontPlainBig.stringWidth(s) / 2 + 100;
+            s = "";
         }
         
         public:
         Slogan(){
             init();
+        }
+        
+        void set(string _s){
+            s = _s;
         }
         
         void draw(){
@@ -103,13 +115,13 @@ class App
             ofPopStyle();
         }
         
+        bool end(){
+            return s == "" || x < - Assets::getInstance()->fontPlainBig.stringWidth(s);
+        }
         void update(){
-            if(ofGetFrameNum() % Settings::getInstance()->getAnimationRate() == 0){
-                x -= 8;
-                if(x < - Assets::getInstance()->fontPlainBig.stringWidth(s)){
-                    init();
-                }
-            }
+            x -= 1;
+            if(end())
+                init();
         };
     };
     
@@ -145,6 +157,7 @@ public:
     
     bool actuators[4];
     void changeActuators();
+    void setSlogan(int state);
 };
 
 

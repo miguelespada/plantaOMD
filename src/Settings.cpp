@@ -80,7 +80,7 @@ ofColor Settings::getWhiteColor(){
     return ofColor::fromHex(ofHexToInt("0x" + color));
 }
 
-string Settings::getSlogan(string state, string value){
-    return Settings::getData(state + "_"  + value).asString();
+string Settings::getSlogan(string state){
+    return Settings::getData(state).asString();
 }
 

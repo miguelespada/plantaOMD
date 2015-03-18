@@ -49,6 +49,7 @@ void ofApp::keyPressed(int key){
             break;
         case 'R':
             bRotated = !bRotated;
+            setRotation();
             break;
             
         default:

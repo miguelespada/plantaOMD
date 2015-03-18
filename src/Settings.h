@@ -33,7 +33,7 @@ public:
     int getSoapRefreshRate();
     int getStateTime();
     
-    string getSlogan(string state, string value);
+    string getSlogan(string state);
 
 private:
     static Settings* instance;

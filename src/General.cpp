@@ -5,6 +5,7 @@
 General::General(App *a){
     ofLogNotice() << "State: " << toString();
     app = a;
+    timer = ofGetElapsedTimeMillis();
 };
 
 void General::draw(){
@@ -42,6 +43,12 @@ void General::update(){
     assets->luz->update();
     assets->agua->update();
     assets->flor->update();
+    
+    app->setSlogan(-1);
+    
+    if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){
+        next();
+    }
 }
 
 void General::next(){

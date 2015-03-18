@@ -31,6 +31,7 @@ void Niebla::update(){
     assets->niebla_bien->update();
     assets->niebla_regular->update();
     assets->niebla_mal->update();
+    app->setSlogan(NIEBLA);
     
     
     if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){

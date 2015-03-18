@@ -9,6 +9,7 @@ Luz::Luz(App *a){
 };
 
 void Luz::draw(){
+    
     switch (app->getPlantState(LUZ)) {
         case BIEN:
             assets->luz_bien->draw();
@@ -30,6 +31,7 @@ void Luz::update(){
     assets->luz_bien->update();
     assets->luz_regular->update();
     assets->luz_mal->update();
+    app->setSlogan(LUZ);
     
     if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){
         next();

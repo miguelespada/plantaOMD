@@ -112,7 +112,6 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
 
 
 void App::changeActuators(){
-    
     for(int i = 0; i < 4; i++){
         ofSendMessage("[Arduino]" + ofToString(i) + ";"  + ofToString(actuators[i]));
     }
@@ -129,7 +128,7 @@ void App::soapEvent(SoapEvent &e){
         states[e.index].state = BIEN;
     
     states[e.index].value = e.value;
-    ofLogNotice() << "Set state " << states[e.index].toString(e.index);
+    states[e.index].change(e.index);
 }
 
 void App::arduinoEvent(ArduinoEvent &e){
@@ -154,4 +153,16 @@ int App::getTemperature(){
 
 int App::getHumidity(){
     return humidity;
+}
+
+void App::setSlogan(int state){
+    if(state == -1){
+        if(slogan.end()){
+            state = ofRandom(4);
+            slogan.set(Settings::getInstance()->getSlogan(states[state].toString(state)));
+        }
+    }
+    else{
+        slogan.set(Settings::getInstance()->getSlogan(states[state].toString(state)));
+    }
 }

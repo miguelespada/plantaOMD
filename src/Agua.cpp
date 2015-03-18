@@ -31,6 +31,7 @@ void Agua::update(){
     assets->agua_bien->update();
     assets->agua_regular->update();
     assets->agua_mal->update();
+    app->setSlogan(AGUA);
 
     
     if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){
