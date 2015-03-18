@@ -8,7 +8,6 @@ Agua::Agua(App *a){
 };
 
 void Agua::draw(){
-    ofBackground(Settings::getInstance()->getBackgroundColor());
     switch (app->getPlantState(AGUA)) {
         case BIEN:
             assets->agua_bien->draw();
@@ -23,7 +22,7 @@ void Agua::draw(){
             break;
     }
     
-    assets->drawString("AGUA:" + ofToString(app->getPlantValue(AGUA)), 380, 776);
+    assets->drawString("AGUA:" + ofToString(app->getPlantValue(AGUA)), 380, 776, assets->fontPlainSmall);
 };
 
 void Agua::update(){

@@ -22,7 +22,7 @@ public:
     static Assets* getInstance();
     void load();
     void loadImage(string filename, ofImage &destination);
-    void drawString(string text, int x, int y);
+    void drawString(string text, int x, int y, ofTrueTypeFont font);
     
     ofImage planta;
     
@@ -49,10 +49,14 @@ public:
     
     Animation *flor;
     
+    ofTrueTypeFont fontPlainSmall;
+    ofTrueTypeFont fontPlainMedium;
+    ofTrueTypeFont fontPlainBig;
+    ofTrueTypeFont fontLight;
+    
 private:
     static Assets* instance;
     Assets();
-    ofTrueTypeFont font;
     
 };
 

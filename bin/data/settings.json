@@ -1,8 +1,14 @@
 {
-  "width" : 480,
-  "height" : 800,
+  "width" : 800,
+  "height" : 480,
   "scale" : 1,
   "animation_rate" : 30,
   "soap_refresh_rate" : 60,
-  "background" : "231F20"
+  "background" : "231F20",
+  "gray" : "808285",
+  "white" : "ffffff",
+  "cyan" : "00ffff",
+  "yellow" : "ffff00",
+  "magenta" : "a224ff",
+  "blue" : "0504c8"
 }

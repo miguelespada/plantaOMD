@@ -46,9 +46,12 @@ void Assets::load(){
     
     agua_bien = new Animation("Personajes/Agua/01_agua_bien_", 5);
     agua_regular = new Animation("Personajes/Agua/02_agua_regular_", 5);
-    agua_mal = new AnimationAguaMal("Personajes/Agua/03_agua_mal_", 5);
+    agua_mal = new AnimationAguaMal("Personajes/Agua/03_agua_mal_", 6);
     
-    font.loadFont("font/CPMono_v07 Light.otf", 10, true, true);
+    fontPlainSmall.loadFont("font/CPMono_v07 Plain.otf", 10, true, true);
+    fontLight.loadFont("font/CPMono_v07 Light.otf", 20, true, true);
+    fontPlainBig.loadFont("font/CPMono_v07 Plain.otf", 15, true, true);
+    fontPlainMedium.loadFont("font/CPMono_v07 Plain.otf", 12, true, true);
 }
 
 void Assets::loadImage(string filename, ofImage &destination){
@@ -58,7 +61,7 @@ void Assets::loadImage(string filename, ofImage &destination){
 }
 
 
-void Assets::drawString(string text, int x, int y){
+void Assets::drawString(string text, int x, int y, ofTrueTypeFont font){
     font.drawString(text, x, y);
 }
 

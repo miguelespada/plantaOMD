@@ -22,6 +22,13 @@ public:
     int getHeight();
     
     ofColor getBackgroundColor();
+    ofColor getGrayColor();
+    ofColor getBlueColor();
+    ofColor getYellowColor();
+    ofColor getMagentaColor();
+    ofColor getCyanColor();
+    ofColor getWhiteColor();
+    
     int getAnimationRate();
     int getSoapRefreshRate();
 

@@ -63,11 +63,31 @@ class App
         
     };
     
+    class Slogan{
+        int x = 0;
+        string s = "AHORA SI! ¡ESTOY ALUMBRADA Y REBOSANTE DE ENERGIA!";
+        
+        public:
+        void draw(){
+            ofPushStyle();
+            ofSetColor(Settings::getInstance()->getBlueColor());
+            Assets::getInstance()->drawString(s, x, 60, Assets::getInstance()->fontPlainBig);
+            ofPopStyle();
+        }
+        
+        void update(){
+            if(ofGetFrameNum() % Settings::getInstance()->getAnimationRate() == 0){
+                x -= 4;
+            }
+        };
+    };
+    
 public:
     
     App();    
     class State *current_state;
     
+
     void setCurrentState(State *s);
     void keyPressed(ofKeyEventArgs& eventArgs);
     void update(ofEventArgs &args);
@@ -77,6 +97,7 @@ public:
     void jump();
     void draw();
     
+    
     int getPlantState(int state);
     int getPlantValue(int index);
     
@@ -84,6 +105,7 @@ public:
     void soapEvent(SoapEvent &e);
     
     PlantState states[4];
+    Slogan slogan;
 };
 
 

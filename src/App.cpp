@@ -31,6 +31,8 @@ void App::jump(){
 void App::draw(){
     ofPushStyle();
     ofPushMatrix();
+    ofBackground(Settings::getInstance()->getBackgroundColor());
+    slogan.draw();
     current_state->draw();
     ofPopMatrix();
     ofPopStyle();
@@ -38,6 +40,7 @@ void App::draw(){
 
 void App::update(){
     current_state->update();
+    slogan.update();
     ofSendMessage("[Info] " + current_state->toString());
 }
 
@@ -87,12 +90,13 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
 
 void App::soapEvent(SoapEvent &e){
     if(e.value < 50)
-        states[e.index].value = MAL;
+        states[e.index].state = MAL;
     else if(e.value < 100)
-        states[e.index].value = REGULAR;
+        states[e.index].state = REGULAR;
     else
-        states[e.index].value = BIEN;
+        states[e.index].state = BIEN;
     
+    states[e.index].value = e.value;
     ofLogNotice() << "Set state " << states[e.index].toString(e.index);
 }
 

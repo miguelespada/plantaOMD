@@ -33,5 +33,5 @@ void Soap::fetchData(){
     json.parse(ofSystem("curl --header \"Content-Type: application/json;charset=UTF-8\" \
                             --header \"SOAPAction:GetKPIs\" \
                             --data \"\" \
-                            http://www.omd.es/wstimereport/wscontrol.asmx/GetKPIs "));
+                            http://www.omd.es/wstimereport/wscontrol.asmx/GetKPIs"));
 }

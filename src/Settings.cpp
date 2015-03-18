@@ -44,7 +44,32 @@ int Settings::getAnimationRate(){
     return Settings::getData("animation_rate").asInt();
 }
 
-
 int Settings::getSoapRefreshRate(){
     return Settings::getData("soap_refresh_rate").asInt();
+}
+
+ofColor Settings::getGrayColor(){
+    string color = Settings::getData("gray").asString();
+    return ofColor::fromHex(ofHexToInt("0x" + color));
+}
+
+ofColor Settings::getYellowColor(){
+    string color = Settings::getData("yellow").asString();
+    return ofColor::fromHex(ofHexToInt("0x" + color));
+}
+ofColor Settings::getBlueColor(){
+    string color = Settings::getData("blue").asString();
+    return ofColor::fromHex(ofHexToInt("0x" + color));
+}
+ofColor Settings::getCyanColor(){
+    string color = Settings::getData("cyan").asString();
+    return ofColor::fromHex(ofHexToInt("0x" + color));
+}
+ofColor Settings::getMagentaColor(){
+    string color = Settings::getData("magenta").asString();
+    return ofColor::fromHex(ofHexToInt("0x" + color));
+}
+ofColor Settings::getWhiteColor(){
+    string color = Settings::getData("white").asString();
+    return ofColor::fromHex(ofHexToInt("0x" + color));
 }

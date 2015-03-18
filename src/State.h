@@ -27,6 +27,7 @@ public:
     virtual std::string toString() {};
     virtual void draw() {};
     virtual void update() {};
+  
 };
 
 

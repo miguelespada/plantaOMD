@@ -3,13 +3,15 @@
 #include "General.h"
 
 #include "ofxJSON.h"
+#include "Soap.h"
 
 ofApp::ofApp(){
 }
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
+//    ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
+    ofSetWindowShape(Settings::getInstance()->getHeight(), Settings::getInstance()->getWidth());
 
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
@@ -24,7 +26,11 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofPushMatrix();
+//    ofTranslate(ofGetWidth(), 0);
+//    ofRotate(90);
     app.draw();
+    ofPopMatrix();
     info.draw();
 }
 

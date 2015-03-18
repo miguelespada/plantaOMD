@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "App.h"
 #include "Info.h"
+#include "Soap.h"
 
 class ofApp : public ofBaseApp{
 public:
@@ -16,6 +17,7 @@ public:
 
     App app;
     Info info;
+    Soap soap;
 };
 
 

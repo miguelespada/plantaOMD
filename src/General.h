@@ -5,12 +5,15 @@
 //========================================================================
 
 class General: public State{
+    void drawElement(string element, int amount, int x, int y, ofColor color, bool bLeft = true);
+
 public:
     General(App *g);
     std::string toString() { return "General"; }
     void update();
     void draw();
     void next();
+
 };
 
 

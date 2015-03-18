@@ -16,8 +16,9 @@ AnimationAguaMal::AnimationAguaMal(string path, int max)
 }
 
 void AnimationAguaMal::draw(){
+    draw_background();
     if(index == 0)
-        draw_background();
+        images[index + 1].draw(0,0);
     else
         images[index + 1].draw(0,0);
 }
