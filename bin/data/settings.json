@@ -1,6 +1,6 @@
 {
-  "width" : 800,
-  "height" : 480,
+  "width" : 480,
+  "height" : 800,
   "scale" : 1,
   "animation_rate" : 30,
   "soap_refresh_rate" : 60,
@@ -10,5 +10,18 @@
   "cyan" : "00ffff",
   "yellow" : "ffff00",
   "magenta" : "a224ff",
-  "blue" : "0504c8"
+  "blue" : "0504c8",
+  "state_time": 8000,
+  "luz_bien" : "¡AHORA SÍ! ¡ESTOY ALUMBRADA Y REBOSANTE DE ENERGÍA!",
+  "luz_regular" : "UY,UY,UY… ¡SE ESTÁ NUBLANDO!¡NECESITO MÁS LUZ! ",
+  "luz_mal" : "¿HAY ALGUIEN AHÍ? ¡SIN LUZ, NO PUEDO VER NADA!",
+  "aire_bien" : "¡AIRE FRESCO! ¡GRACIAS POR LA BRISA QUE ME DAS! ",
+  "aire_regular" : "¡SIGO MAREADA! ¿UN POCO MÁS DE AIRE, PLIS?",
+  "aire_mal" : "¡ME FALTA AIREEE! ¡SOPLA QUE ÉSTO NO SE MUEVE!",
+  "agua_bien" : "¡CHOCA ESOS 5! ¡TUS GOTAS SON MI NUTRIENTE FAVORITO!",
+  "agua_regular" : "NO ME VENDRÍAN MAL UNAS GOTAS DE MÁS…",
+  "agua_mal" : "¡TSS,TSS! ¡NECESITO NUTRIRME O DESFALLEZCO!",
+  "niebla_bien" : "¡YEEAH! ¡AHORA SÍ CONTEMPLAS MI BELLEZA!",
+  "niebla_regular" : "LO APRECIO PERO, ¿TE IMPORTA DARME MÁS HUMEDAD?",
+  "niebla_mal" : "¡NOOOOOO!!! ¡SIN HUMEDAD ESTOY MUSTIA Y NADA SEXY!"
 }

@@ -21,6 +21,7 @@
 		49A03F471A97914B0094081E /* Luz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F451A97914B0094081E /* Luz.cpp */; };
 		49A03F4A1A97979F0094081E /* Info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49A03F481A97979F0094081E /* Info.cpp */; };
 		49BF93FD1AB9B32100FFA272 /* AnimationFlor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49BF93FB1AB9B32100FFA272 /* AnimationFlor.cpp */; };
+		49BF94001AB9F1DB00FFA272 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49BF93FF1AB9F1DB00FFA272 /* State.cpp */; };
 		49CE12101A027CD70049A62B /* Assets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11EF1A027CD70049A62B /* Assets.cpp */; };
 		49CE12141A027CD70049A62B /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11F71A027CD70049A62B /* App.cpp */; };
 		49CE12171A027CD70049A62B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 49CE11FD1A027CD70049A62B /* main.cpp */; };
@@ -137,6 +138,7 @@
 		49A03F491A97979F0094081E /* Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Info.h; sourceTree = "<group>"; };
 		49BF93FB1AB9B32100FFA272 /* AnimationFlor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationFlor.cpp; sourceTree = "<group>"; };
 		49BF93FC1AB9B32100FFA272 /* AnimationFlor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationFlor.h; sourceTree = "<group>"; };
+		49BF93FF1AB9F1DB00FFA272 /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
 		49CE11EF1A027CD70049A62B /* Assets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Assets.cpp; sourceTree = "<group>"; };
 		49CE11F01A027CD70049A62B /* Assets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assets.h; sourceTree = "<group>"; };
 		49CE11F71A027CD70049A62B /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				49CE120F1A027CD70049A62B /* State.h */,
+				49BF93FF1AB9F1DB00FFA272 /* State.cpp */,
 				49A03F401A978B7D0094081E /* General.cpp */,
 				49A03F411A978B7D0094081E /* General.h */,
 				49A03F451A97914B0094081E /* Luz.cpp */,
@@ -759,6 +762,7 @@
 				49CE121B1A027CD70049A62B /* ofApp.cpp in Sources */,
 				49FB4BFE1AAB79D7000A7324 /* SoapEvent.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
+				49BF94001AB9F1DB00FFA272 /* State.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				49CE121F1A027CD70049A62B /* Settings.cpp in Sources */,
 				49F8D4481A98A3AD00F3D428 /* ArduinoEvent.cpp in Sources */,

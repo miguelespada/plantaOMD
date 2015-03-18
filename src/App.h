@@ -34,27 +34,42 @@ class App
         
         void inc(int index){
             state = (int)ofClamp(state + 1, 0, 2);
-            ofLogNotice() << indexToString(index) << ":" <<  state;
+            ofLogNotice() << indexToString(index) << "->" <<  stateToString(state);
         }
         
         void dec(int index){
             state = (int)ofClamp(state - 1, 0, 2);
-            ofLogNotice() << indexToString(index) << ":" << state;
+            ofLogNotice() << indexToString(index) << "->" << stateToString(state);
         }
         
         static string indexToString(int index){
             switch (index) {
                 case LUZ:
-                    return "Luz";
+                    return "luz";
                     break;
                 case NIEBLA:
-                    return "Niebla";
+                    return "niebla";
                     break;
                 case VIENTO:
-                    return "Viento";
+                    return "viento";
                     break;
                 case AGUA:
-                    return "Agua";
+                    return "agua";
+                    break;
+                default:
+                    break;
+            }
+        }
+        static string stateToString(int state){
+            switch (state) {
+                case 0:
+                    return "mal";
+                    break;
+                case 1:
+                    return "regular";
+                    break;
+                case 2:
+                    return "bien";
                     break;
                 default:
                     break;
@@ -84,7 +99,7 @@ class App
             
             ofSetColor(Settings::getInstance()->getBackgroundColor());
             ofRect(0, 40, 42, 25);
-            ofRect(ofGetWidth() - 56, 40, 60, 25);
+            ofRect(Settings::getInstance()->getWidth() - 56, 40, 60, 25);
             ofPopStyle();
         }
         
@@ -127,6 +142,9 @@ public:
     
     int temperature = 0;
     int humidity = 0;
+    
+    bool actuators[4];
+    void changeActuators();
 };
 
 

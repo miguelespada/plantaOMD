@@ -14,6 +14,10 @@ App::App(){
     ofAddListener(ofEvents().update, this, &App::update);    
     ofAddListener(ArduinoEvent::digitalEvents, this, &App::arduinoEvent);
     ofAddListener(SoapEvent::SoapEvents, this, &App::soapEvent);
+    
+    for(int i = 0; i < 4; i++){
+        actuators[i] = false;
+    }
 }
 
 void App::setCurrentState(State *s){
@@ -83,10 +87,38 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
             states[AGUA].dec(AGUA);
             break;
             
+        case '1':
+            actuators[LUZ] = !actuators[LUZ];
+            changeActuators();
+            break;
+        case '2':
+            actuators[AGUA] = !actuators[AGUA];
+            changeActuators();
+            break;
+        case '3':
+            actuators[NIEBLA] = !actuators[NIEBLA];
+            changeActuators();
+            break;
+        case '4':
+            actuators[VIENTO] = !actuators[VIENTO];
+            changeActuators();
+            break;
+            
         default:
             break;
     }
+
 }
+
+
+void App::changeActuators(){
+    
+    for(int i = 0; i < 4; i++){
+        ofSendMessage("[Arduino]" + ofToString(i) + ";"  + ofToString(actuators[i]));
+    }
+    
+}
+
 
 void App::soapEvent(SoapEvent &e){
     if(e.value < 50)

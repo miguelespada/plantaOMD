@@ -10,9 +10,8 @@ ofApp::ofApp(){
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-//    ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
-    ofSetWindowShape(Settings::getInstance()->getHeight(), Settings::getInstance()->getWidth());
-
+    
+    setRotation();
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
     app.setCurrentState(new General(&app));
@@ -27,8 +26,10 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofPushMatrix();
-  //  ofTranslate(ofGetWidth(), 0);
-  //  ofRotate(90);
+    if(bRotated){
+        ofTranslate(ofGetWidth(), 0);
+        ofRotate(90);
+    }
     app.draw();
     ofPopMatrix();
     info.draw();
@@ -46,7 +47,21 @@ void ofApp::keyPressed(int key){
         case 'C':
             ofShowCursor();
             break;
+        case 'R':
+            bRotated = !bRotated;
+            break;
+            
         default:
             break;
     }
+}
+
+
+void ofApp::setRotation(){
+    
+    if(bRotated)
+        ofSetWindowShape(Settings::getInstance()->getHeight(), Settings::getInstance()->getWidth());
+    else
+        ofSetWindowShape(Settings::getInstance()->getWidth(), Settings::getInstance()->getHeight());
+    
 }

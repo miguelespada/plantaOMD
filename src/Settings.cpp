@@ -48,6 +48,11 @@ int Settings::getSoapRefreshRate(){
     return Settings::getData("soap_refresh_rate").asInt();
 }
 
+
+int Settings::getStateTime(){
+    return Settings::getData("state_time").asInt();
+}
+
 ofColor Settings::getGrayColor(){
     string color = Settings::getData("gray").asString();
     return ofColor::fromHex(ofHexToInt("0x" + color));
@@ -69,7 +74,13 @@ ofColor Settings::getMagentaColor(){
     string color = Settings::getData("magenta").asString();
     return ofColor::fromHex(ofHexToInt("0x" + color));
 }
+
 ofColor Settings::getWhiteColor(){
     string color = Settings::getData("white").asString();
     return ofColor::fromHex(ofHexToInt("0x" + color));
 }
+
+string Settings::getSlogan(string state, string value){
+    return Settings::getData(state + "_"  + value).asString();
+}
+

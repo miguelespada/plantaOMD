@@ -21,6 +21,9 @@ public:
     Soap soap;
     ArduinoWrapper arduino;
     
+    bool bRotated = false;
+    void setRotation();
+    
 };
 
 

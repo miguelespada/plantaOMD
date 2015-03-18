@@ -4,6 +4,7 @@
 
 Viento::Viento(App *a){
     ofLogNotice() << "State: " << toString();
+    timer = ofGetElapsedTimeMillis();
     app = a;
 };
 
@@ -32,6 +33,11 @@ void Viento::update(){
     assets->viento_bien->update();
     assets->viento_regular->update();
     assets->viento_mal->update();
+    
+    
+    if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){
+        next();
+    }
 }
 
 void Viento::next(){

@@ -4,6 +4,7 @@
 
 Luz::Luz(App *a){
     ofLogNotice() << "State: " << toString();
+    timer = ofGetElapsedTimeMillis();
     app = a;
 };
 
@@ -22,15 +23,17 @@ void Luz::draw(){
             break;
     }
     
-    
     drawValue("LUZ:" + ofToString(app->getPlantValue(LUZ)) + "%", 775);
 };
 
 void Luz::update(){
-    
     assets->luz_bien->update();
     assets->luz_regular->update();
     assets->luz_mal->update();
+    
+    if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){
+        next();
+    }
 }
 
 void Luz::next(){

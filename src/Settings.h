@@ -31,6 +31,9 @@ public:
     
     int getAnimationRate();
     int getSoapRefreshRate();
+    int getStateTime();
+    
+    string getSlogan(string state, string value);
 
 private:
     static Settings* instance;

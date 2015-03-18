@@ -31,14 +31,13 @@ class ArduinoWrapper
     void    read();
     void    write();
     void    processData();
-    
     string  data;
-    void keyPressed(ofKeyEventArgs& eventArgs);
     
 public:
     ArduinoWrapper();
     ~ArduinoWrapper();
     void update(ofEventArgs &args);
+    void gotMessage(ofMessage& msg);
     ofSerial	*arduino;
     
 };

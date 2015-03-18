@@ -4,6 +4,7 @@
 
 Niebla::Niebla(App *a){
     ofLogNotice() << "State: " << toString();
+    timer = ofGetElapsedTimeMillis();
     app = a;
 };
 
@@ -30,6 +31,11 @@ void Niebla::update(){
     assets->niebla_bien->update();
     assets->niebla_regular->update();
     assets->niebla_mal->update();
+    
+    
+    if((ofGetElapsedTimeMillis() - timer) > Settings::getInstance()->getStateTime()){
+        next();
+    }
 }
 
 void Niebla::next(){
