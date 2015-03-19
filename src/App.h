@@ -156,7 +156,7 @@ public:
     int humidity = 0;
     
     bool actuators[4];
-    void changeActuators();
+    void changeActuators(int index);
     void setSlogan(int state);
 };
 

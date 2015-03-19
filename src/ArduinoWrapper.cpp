@@ -14,6 +14,7 @@ ArduinoWrapper::ArduinoWrapper(){
     arduino = new ofSerial;
     ofAddListener(ofEvents().update, this, &ArduinoWrapper::update);
     ofRegisterGetMessages(this);
+    ofAddListener(ofEvents().keyPressed, this, &ArduinoWrapper::keyPressed);
 
 }
 
@@ -112,31 +113,39 @@ void ArduinoWrapper::write(){
 void ArduinoWrapper::gotMessage(ofMessage& msg){
     if(msg.message.substr(0, 9) == "[Arduino]"){
         vector<string> tokens = ofSplitString(msg.message.substr(9), ";");
-        if(tokens[0] == "0"){
+        ofLogNotice() << "[ArduinoWrapper] Received: " << tokens[0] << " " <<  tokens[1];
+        if(tokens[0] == "luz"){
+            int r = ofRandom(255);
+            int g = ofRandom(255);
+            int b = ofRandom(255);
+            arduino->writeByte(6);
+            arduino->writeByte(r);
+            arduino->writeByte(g);
+            arduino->writeByte(b);
+            ofLogNotice() << "[Set light] " << r << " " << g << " " << b;
+        }
+        if(tokens[0] == "agua"){
             arduino->writeByte(2);
             arduino->writeByte(ofToInt(tokens[1]));
             ofLogNotice() << "[Set pin] " << 2 << " " << tokens[1];
         }
-        if(tokens[0] == "1"){
+        if(tokens[0] == "niebla"){
             arduino->writeByte(3);
             arduino->writeByte(ofToInt(tokens[1]));
             ofLogNotice() << "[Set pin] " << 3 << " " << tokens[1];
         }
-        if(tokens[0] == "2"){
+        if(tokens[0] == "viento"){
             arduino->writeByte(4);
             arduino->writeByte(ofToInt(tokens[1]));
-            ofLogNotice() << "[Set pin] " << 4 << " " << tokens[1];
-        }
-        if(tokens[0] == "3"){
             arduino->writeByte(5);
             arduino->writeByte(ofToInt(tokens[1]));
-            ofLogNotice() << "[Set pin] " << 5 << " " << tokens[1];
+            ofLogNotice() << "[Set pin] " << 4 << " " <<  5 << " " << tokens[1];
         }
     }
 }
 
 
-//void ArduinoWrapper::keyPressed (ofKeyEventArgs& eventArgs){
+void ArduinoWrapper::keyPressed (ofKeyEventArgs& eventArgs){
 //    switch (eventArgs.key) {
 //        case '1':
 //            arduino->writeByte(2);
@@ -188,6 +197,6 @@ void ArduinoWrapper::gotMessage(ofMessage& msg){
 //            arduino->writeByte(b);
 //            break;
 //    }
-//}
+}
 
 

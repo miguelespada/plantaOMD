@@ -89,19 +89,19 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
             
         case '1':
             actuators[LUZ] = !actuators[LUZ];
-            changeActuators();
+            changeActuators(LUZ);
             break;
         case '2':
             actuators[AGUA] = !actuators[AGUA];
-            changeActuators();
+            changeActuators(AGUA);
             break;
         case '3':
             actuators[NIEBLA] = !actuators[NIEBLA];
-            changeActuators();
+            changeActuators(NIEBLA);
             break;
         case '4':
             actuators[VIENTO] = !actuators[VIENTO];
-            changeActuators();
+            changeActuators(VIENTO);
             break;
             
         default:
@@ -111,11 +111,8 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
 }
 
 
-void App::changeActuators(){
-    for(int i = 0; i < 4; i++){
-        ofSendMessage("[Arduino]" + ofToString(i) + ";"  + ofToString(actuators[i]));
-    }
-    
+void App::changeActuators(int index){
+    ofSendMessage("[Arduino]" + PlantState::indexToString(index) + ";"  + ofToString(actuators[index]));    
 }
 
 
