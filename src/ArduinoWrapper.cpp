@@ -132,14 +132,14 @@ void ArduinoWrapper::gotMessage(ofMessage& msg){
         if(tokens[0] == "niebla"){
             arduino->writeByte(3);
             arduino->writeByte(ofToInt(tokens[1]));
-            ofLogNotice() << "[Set pin] " << 3 << " " << tokens[1];
-        }
-        if(tokens[0] == "viento"){
             arduino->writeByte(4);
             arduino->writeByte(ofToInt(tokens[1]));
+            ofLogNotice() << "[Set pin] " << 3 << " " <<  4 << " " << tokens[1];
+        }
+        if(tokens[0] == "viento"){
             arduino->writeByte(5);
             arduino->writeByte(ofToInt(tokens[1]));
-            ofLogNotice() << "[Set pin] " << 4 << " " <<  5 << " " << tokens[1];
+            ofLogNotice() << "[Set pin] " << 5 << " " << tokens[1];
         }
     }
 }

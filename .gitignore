@@ -2,3 +2,4 @@ bin/*.app
 .DS_Store
 bin/libs
 obj
+planta.xcodeproj
