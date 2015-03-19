@@ -1,7 +1,4 @@
 bin/*.app
-Makefile
 .DS_Store
-Project.xcconfig
-heinneken.xcodeproj
 bin/libs
 obj
