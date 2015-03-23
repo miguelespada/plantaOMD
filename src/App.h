@@ -150,6 +150,7 @@ public:
     void soapEvent(SoapEvent &e);
     
     PlantState states[4];
+    PlantState prevStates[4];
     Slogan slogan;
     
     int temperature = 0;

@@ -27,7 +27,6 @@ class ArduinoWrapper
     void    setupArduino(const int & version);
     void    digitalPinChanged(const int & pinNum);
     void    analogPinChanged(const int & pinNum);
-    void    keyPressed(ofKeyEventArgs& eventArgs);
     void    update();
     void    read();
     void    write();

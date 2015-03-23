@@ -17,7 +17,12 @@ App::App(){
     
     for(int i = 0; i < 4; i++){
         actuators[i] = false;
+        states[i].value = 0;
+        prevStates[i].value = 0;
+        states[i].state = MAL;
     }
+    
+    
 }
 
 void App::setCurrentState(State *s){
@@ -126,6 +131,12 @@ void App::soapEvent(SoapEvent &e){
     
     states[e.index].value = e.value;
     states[e.index].change(e.index);
+    
+    if(states[e.index].value > prevStates[e.index].value){
+        ofSendMessage("[Arduino] increment");
+    }
+    
+    prevStates[e.index] = states[e.index];
 }
 
 void App::arduinoEvent(ArduinoEvent &e){
