@@ -16,6 +16,7 @@ void ofApp::setup(){
     ofSetFrameRate(60);
     app.setCurrentState(new General(&app));
     ofToggleFullscreen();
+    ofHideCursor();
     
 }
 
@@ -52,7 +53,6 @@ void ofApp::keyPressed(int key){
             bRotated = !bRotated;
             setRotation();
             break;
-            
         default:
             break;
     }
