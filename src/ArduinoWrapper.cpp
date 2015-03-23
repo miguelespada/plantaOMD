@@ -111,22 +111,15 @@ void ArduinoWrapper::write(){
 void ArduinoWrapper::gotMessage(ofMessage& msg){
     if(msg.message.substr(0, 9) == "[Arduino]"){
         if(msg.message == "[Arduino] increment"){
-            ofLogNotice() << "Increment" << endl;
-            
-            int r = ofRandom(255);
-            int g = ofRandom(255);
-            int b = ofRandom(255);
-            arduino->writeByte(6);
-            arduino->writeByte(r);
-            arduino->writeByte(g);
-            arduino->writeByte(b);
-            ofLogNotice() << "[Set light] " << r << " " << g << " " << b;
-            
+            randomLight();
         }
         else{
         
             vector<string> tokens = ofSplitString(msg.message.substr(9), ";");
             ofLogNotice() << "[ArduinoWrapper] Received: " << tokens[0] << " " <<  tokens[1];
+            if(tokens[1] == "luz"){
+                randomLight();
+            }
             if(tokens[0] == "agua"){
                 arduino->writeByte(2);
                 arduino->writeByte(ofToInt(tokens[1]));
@@ -146,4 +139,15 @@ void ArduinoWrapper::gotMessage(ofMessage& msg){
         }
         }
     }
+}
+
+void ArduinoWrapper::randomLight(){
+    int r = ofRandom(255);
+    int g = ofRandom(255);
+    int b = ofRandom(255);
+    arduino->writeByte(6);
+    arduino->writeByte(r);
+    arduino->writeByte(g);
+    arduino->writeByte(b);
+    ofLogNotice() << "[Set light] " << r << " " << g << " " << b;
 }

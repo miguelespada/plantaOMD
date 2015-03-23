@@ -32,6 +32,7 @@ class ArduinoWrapper
     void    write();
     void    processData();
     string  data;
+    void    randomLight();
     
 public:
     ArduinoWrapper();
