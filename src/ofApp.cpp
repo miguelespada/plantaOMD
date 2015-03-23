@@ -15,6 +15,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
     app.setCurrentState(new General(&app));
+    ofToggleFullscreen();
     
 }
 
