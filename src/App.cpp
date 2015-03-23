@@ -96,7 +96,7 @@ void App::keyPressed (ofKeyEventArgs& eventArgs){
             actuators[LUZ] = !actuators[LUZ];
             changeActuators(LUZ);
             break;
-        case '2':
+        case '0':
             actuators[AGUA] = !actuators[AGUA];
             changeActuators(AGUA);
             break;
