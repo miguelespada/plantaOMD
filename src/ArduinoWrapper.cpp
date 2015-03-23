@@ -99,7 +99,6 @@ void ArduinoWrapper::processData(){
     
     ArduinoEvent event2("Humidity", ofToInt(tokens[1]));
     ofNotifyEvent(ArduinoEvent::digitalEvents, event2);
-    
 }
 
 //--------------------------------------------------------------
@@ -114,10 +113,9 @@ void ArduinoWrapper::gotMessage(ofMessage& msg){
             randomLight();
         }
         else{
-        
             vector<string> tokens = ofSplitString(msg.message.substr(9), ";");
             ofLogNotice() << "[ArduinoWrapper] Received: " << tokens[0] << " " <<  tokens[1];
-            if(tokens[1] == "luz"){
+            if(tokens[0] == "luz"){
                 randomLight();
             }
             if(tokens[0] == "agua"){
